@@ -1,0 +1,24 @@
+{
+  "name": "gaia-application",
+  "version": "1.0.0",
+  "description": "### Working repo for my Thanksgiving 2018 Gaia Junior Software Engineer application project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morristaylor/gaia-application.git"
+  },
+  "author": "Taylor Morris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/morristaylor/gaia-application/issues"
+  },
+  "homepage": "https://github.com/morristaylor/gaia-application#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "puppeteer": "^1.10.0",
+    "request": "^2.88.0"
+  }
+}
