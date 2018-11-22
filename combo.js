@@ -5,13 +5,15 @@ const cheerio = require('cheerio');
 const nocUrl = 'https://www.oregonhikers.org/field_guide/Category:Coast_Range'
 
 function Trailhead(name, url, driveTime, lat, lng) {
-    this.name = name;
-    this.url =  url;
-    this.driveTime = driveTime;
-    this.lat = lat;
-    this.lng = lng;
-  }
-
+  this.type = "Feature",
+  this.properties = {},
+  this.properties.name = name,
+  this.properties.url = url,
+  this.properties.driveTime = driveTime
+  this.geometry = {},
+  this.geometry.type = "Point",
+  this.geometry.coordinates = `[${lng}, ${lat}]`
+}
 
 function getLinks() {
   let trailheadURLs = [];
@@ -33,10 +35,13 @@ function getLinks() {
             const driveTime = $('#mw-content-text > ul > li').slice(4, 5).text().slice(29).trim();
             let trailhead = new Trailhead(name, url, driveTime, lat, lng);
             trailheads.push(trailhead);
+            console.log(JSON.stringify(trailhead))
             }
           });
         })
     });
   }
+
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all promise the functions to write to json?
 
   getLinks();
