@@ -4,10 +4,32 @@ var map = new mapboxgl.Map({
   container: 'map',
   center: [-122.9929, 45.5970],
   style: 'mapbox://styles/mapbox/outdoors-v10',
-  zoom: 9.25,
+  zoom: 9,
   bearing: 300,
   pitch: 60
 });
+
+// map.on('load', function () {
+//   map.addLayer({
+//     "id": "places",
+//     "type": "symbol",
+//     "source": {
+//       "type": "geojson",
+//       "data": {
+//   "type": "FeatureCollection",
+//   "features": [{
+//      "type":"Feature",
+//      "geometry":{"type":"Point","coordinates":[-122.9366,45.5200]},
+//      "properties":{"icon": "campsite", "waterbody":"Waverly Lake","location_state":null,"diesel_on_the_water":"Not Available","construction":"None at this time","website":null,"transient_dock_footage":"Not Available","location_zip":null,"pumpout":"No","pump_dump_location":null,"latitude":null,"dump_station":"No","additional_local_information":null,"location_address":null,"moorage":"Not Available","location_city":null,"boat_wash_station":null,"longitude":null,"website_description":null,"code":"HlPr","county":"Linn","gas_on_the_water":"Not Available","telephone_type":null,"boating_facility_name":"Waverly Park","fish_cleaning_station":"Not Available","use":null,"managed_by":"City of Albany","telephone":"541-917-7777","supplies":"Not Available","additional_local_information_description":null,"waterbody_aka_":null,"launch_fee":"None",":@computed_region_i25a_xk5b":"2407","ramp_type_lanes":"Hand Launch","facility_also_known_as_aka_":null,"restroom":"Flush Restroom Available","comments":null,"trailer_parking":"Not Available"}
+//      }]
+// }
+//     },
+//     "layout": {
+//             "icon-image": "{icon}-15",
+//             "icon-allow-overlap": true
+//         }
+//   });
+// });
 
 map.on('load', function () {
     // Add a layer showing the places.
@@ -38,8 +60,8 @@ map.on('load', function () {
             "line-cap": "round"
         },
         "paint": {
-            "line-color": "#888",
-            "line-width": 8
+            "line-color": "#c20ed5",
+            "line-width": 1.3
         }
     });
   });

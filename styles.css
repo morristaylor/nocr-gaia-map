@@ -1,0 +1,35 @@
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background-color: #B3C2C0;
+  color: #00221E;
+}
+
+.centered {
+  width: 75%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+#header {
+  font-family: 'Lato', sans-serif;
+  margin-top: .5%;
+  display: flex;
+  justify-content: center;
+}
+
+#header h2 {
+  flex-direction: row;
+  padding: 0 2em;
+  color: #FAFAFA;
+}
+
+#map {
+  height: 450px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#grafs {
+  font-family: 'Lora', serif;
+  width: 90%;
+  margin: auto;
+}
