@@ -1,5 +1,4 @@
-mapboxgl.accessToken = `'${MBOX_API}'`;
-
+mapboxgl.accessToken = 'pk.eyJ1IjoidGF5bG9ybW9ycmlzIiwiYSI6ImNqb3E3NGo4YTAyMDEzcG11d2w3Z3BqOWUifQ.xO2zMgLIrCXcIav8p9jDIQ';
 var map = new mapboxgl.Map({
   container: 'map',
   center: [-122.9929, 45.5970],
