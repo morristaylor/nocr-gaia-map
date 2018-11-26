@@ -1,4 +1,4 @@
-mapboxgl.accessToken = MBOX_API;
+mapboxgl.accessToken = `'${MBOX_API}'`;
 
 var map = new mapboxgl.Map({
   container: 'map',
