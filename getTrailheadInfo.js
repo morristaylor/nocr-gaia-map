@@ -9,7 +9,7 @@ function Trailhead(name, url, driveTime, lat, lng) {
   this.properties.name = name,
   this.properties.url = url,
   this.properties.driveTime = driveTime
-  this.properties.icon = 'campsite',
+  this.properties.icon = 'triangle',
   this.geometry = {},
   this.geometry.type = "Point",
   this.geometry.coordinates = [lng, lat]
@@ -26,8 +26,10 @@ function getTrailheadInfo() {
         const lng = parseFloat($('#mw-content-text > ul > li:nth-child(2)').text().slice(12).trim());
         const driveTime = $('#mw-content-text > ul > li').slice(4, 5).text().slice(29).trim();
         let trailhead = new Trailhead(name, url, driveTime, lat, lng);
-        trailheads.push(trailhead);
-        fs.writeFileSync('trailhead-info.json', JSON.stringify(trailheads));
+        if (trailhead.geometry.coordinates[1] >= 45) {
+          trailheads.push(trailhead);
+        }
+        fs.writeFileSync('trailhead-info2.json', JSON.stringify(trailheads));
       });
   })
 }

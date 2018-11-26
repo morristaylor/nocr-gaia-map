@@ -1,4 +1,4 @@
-mapboxgl.accessToken = '';
+mapboxgl.accessToken = MBOX_API;
 
 var map = new mapboxgl.Map({
   container: 'map',
@@ -9,28 +9,6 @@ var map = new mapboxgl.Map({
   pitch: 60
 });
 
-// map.on('load', function () {
-//   map.addLayer({
-//     "id": "places",
-//     "type": "symbol",
-//     "source": {
-//       "type": "geojson",
-//       "data": {
-//   "type": "FeatureCollection",
-//   "features": [{
-//      "type":"Feature",
-//      "geometry":{"type":"Point","coordinates":[-122.9366,45.5200]},
-//      "properties":{"icon": "campsite", "waterbody":"Waverly Lake","location_state":null,"diesel_on_the_water":"Not Available","construction":"None at this time","website":null,"transient_dock_footage":"Not Available","location_zip":null,"pumpout":"No","pump_dump_location":null,"latitude":null,"dump_station":"No","additional_local_information":null,"location_address":null,"moorage":"Not Available","location_city":null,"boat_wash_station":null,"longitude":null,"website_description":null,"code":"HlPr","county":"Linn","gas_on_the_water":"Not Available","telephone_type":null,"boating_facility_name":"Waverly Park","fish_cleaning_station":"Not Available","use":null,"managed_by":"City of Albany","telephone":"541-917-7777","supplies":"Not Available","additional_local_information_description":null,"waterbody_aka_":null,"launch_fee":"None",":@computed_region_i25a_xk5b":"2407","ramp_type_lanes":"Hand Launch","facility_also_known_as_aka_":null,"restroom":"Flush Restroom Available","comments":null,"trailer_parking":"Not Available"}
-//      }]
-// }
-//     },
-//     "layout": {
-//             "icon-image": "{icon}-15",
-//             "icon-allow-overlap": true
-//         }
-//   });
-// });
-
 map.on('load', function () {
     // Add a layer showing the places.
     map.addLayer({
@@ -40,8 +18,1018 @@ map.on('load', function () {
             "type": "geojson",
             "data": {
               "type": "FeatureCollection",
-              "features": [{"type":"Feature","properties":{"name":"Cedar Butte Trailhead","url":"https://www.oregonhikers.org/field_guide/Cedar_Butte_Trailhead","driveTime":"80 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.646,45.5828]}},{"type":"Feature","properties":{"name":"Bloom Lake Trailhead","url":"https://www.oregonhikers.org/field_guide/Bloom_Lake_Trailhead","driveTime":"60 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.5136,45.838]}},{"type":"Feature","properties":{"name":"Barklow West Trailhead","url":"https://www.oregonhikers.org/field_guide/Barklow_West_Trailhead","driveTime":"m Port Orford; 90 minutes from Bandon","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-124.18353,42.74696]}},{"type":"Feature","properties":{"name":"Gales Creek Winter Trailhead","url":"https://www.oregonhikers.org/field_guide/Gales_Creek_Winter_Trailhead","driveTime":"45 minutes from downtown Portland","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.34723,45.64527]}},{"type":"Feature","properties":{"name":"Alsea Falls Trailhead","url":"https://www.oregonhikers.org/field_guide/Alsea_Falls_Trailhead","driveTime":"115 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.49186,44.3241]}},{"type":"Feature","properties":{"name":"Drift Creek Falls Trailhead","url":"https://www.oregonhikers.org/field_guide/Drift_Creek_Falls_Trailhead","driveTime":"2 hours","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.86273,44.93342]}},{"type":"Feature","properties":{"name":"Elk Creek Trailhead","url":"https://www.oregonhikers.org/field_guide/Elk_Creek_Trailhead","driveTime":"1 hour","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.4666,45.6103]}},{"type":"Feature","properties":{"name":"Connor's Camp Trailhead","url":"https://www.oregonhikers.org/field_guide/Connor%27s_Camp_Trailhead","driveTime":"110 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.54298,44.49561]}},{"type":"Feature","properties":{"name":"Four County Point Trailhead","url":"https://www.oregonhikers.org/field_guide/Four_County_Point_Trailhead","driveTime":"50 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.3517,45.7805]}},{"type":"Feature","properties":{"name":"Gales Creek Trailhead","url":"https://www.oregonhikers.org/field_guide/Gales_Creek_Trailhead","driveTime":"50 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.35926,45.64231]}},{"type":"Feature","properties":{"name":"Clayhill Horse Trailhead","url":"https://www.oregonhikers.org/field_guide/Clayhill_Horse_Trailhead","driveTime":"45 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.1847,45.7479]}},{"type":"Feature","properties":{"name":"Hilltop Trailhead","url":"https://www.oregonhikers.org/field_guide/Hilltop_Trailhead","driveTime":"45 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.1861,45.7417]}},{"type":"Feature","properties":{"name":"Kentucky Falls Trailhead","url":"https://www.oregonhikers.org/field_guide/Kentucky_Falls_Trailhead","driveTime":"3.5 hours","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.7937,43.9282]}},{"type":"Feature","properties":{"name":"Gnat Creek Hatchery Trailhead","url":"https://www.oregonhikers.org/field_guide/Gnat_Creek_Hatchery_Trailhead","driveTime":"90 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.48801,46.16918]}},{"type":"Feature","properties":{"name":"Marys Peak North Ridge Trailhead","url":"https://www.oregonhikers.org/field_guide/Marys_Peak_North_Ridge_Trailhead","driveTime":"100 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.54484,44.5306]}},{"type":"Feature","properties":{"name":"Grassy Knob Trailhead","url":"https://www.oregonhikers.org/field_guide/Grassy_Knob_Trailhead","driveTime":"m Port Orford; 50 minutes from Bandon","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-124.3789,42.7524]}},{"type":"Feature","properties":{"name":"Gnat Creek Trailhead","url":"https://www.oregonhikers.org/field_guide/Gnat_Creek_Trailhead","driveTime":"90 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.50193,46.17728]}},{"type":"Feature","properties":{"name":"Horse Creek North Trailhead","url":"https://www.oregonhikers.org/field_guide/Horse_Creek_North_Trailhead","driveTime":"3 hours","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.9086,44.4813]}},{"type":"Feature","properties":{"name":"Golden and Silver Falls Trailhead","url":"https://www.oregonhikers.org/field_guide/Golden_and_Silver_Falls_Trailhead","driveTime":"m Coos Bay","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.9333,43.482]}},{"type":"Feature","properties":{"name":"Keenig Creek Trailhead","url":"https://www.oregonhikers.org/field_guide/Keenig_Creek_Trailhead","driveTime":"70 minutes from downtown Portland","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.61223,45.54342]}},{"type":"Feature","properties":{"name":"Fort Hoskins Trailhead","url":"https://www.oregonhikers.org/field_guide/Fort_Hoskins_Trailhead","driveTime":"100 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.4633,44.67593]}},{"type":"Feature","properties":{"name":"Northrup Creek Winter Trailhead","url":"https://www.oregonhikers.org/field_guide/Northrup_Creek_Winter_Trailhead","driveTime":"85 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.4322,46.0065]}},{"type":"Feature","properties":{"name":"Cochran Trailhead","url":"https://www.oregonhikers.org/field_guide/Cochran_Trailhead","driveTime":"70 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.41114,45.70453]}},{"type":"Feature","properties":{"name":"Beaver Falls Trailhead","url":"https://www.oregonhikers.org/field_guide/Beaver_Falls_Trailhead","driveTime":"80 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.12982,46.10387]}},{"type":"Feature","properties":{"name":"Marys Peak Summit Trailhead","url":"https://www.oregonhikers.org/field_guide/Marys_Peak_Summit_Trailhead","driveTime":"2 hours","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.55068,44.51055]}},{"type":"Feature","properties":{"name":"Beaver Creek Trailhead (Banks-Vernonia)","url":"https://www.oregonhikers.org/field_guide/Beaver_Creek_Trailhead_(Banks-Vernonia)","driveTime":"50 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.23117,45.81067]}},{"type":"Feature","properties":{"name":"Jones Creek Trailhead","url":"https://www.oregonhikers.org/field_guide/Jones_Creek_Trailhead","driveTime":"1 hour from downtown Portland","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.55602,45.58795]}},{"type":"Feature","properties":{"name":"Cougar Valley Trailhead","url":"https://www.oregonhikers.org/field_guide/Cougar_Valley_Trailhead","driveTime":"110 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.76176,45.71335]}},{"type":"Feature","properties":{"name":"Harris Ranch Trailhead","url":"https://www.oregonhikers.org/field_guide/Harris_Ranch_Trailhead","driveTime":"160 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.9323,44.4287]}},{"type":"Feature","properties":{"name":"Lee Falls Road Trailhead","url":"https://www.oregonhikers.org/field_guide/Lee_Falls_Road_Trailhead","driveTime":"70 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.2574,45.4522]}},{"type":"Feature","properties":{"name":"Deyoe Creek Trailhead","url":"https://www.oregonhikers.org/field_guide/Deyoe_Creek_Trailhead","driveTime":"55 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.36677,45.61428]}},{"type":"Feature","properties":{"name":"Diamond Mill Trailhead","url":"https://www.oregonhikers.org/field_guide/Diamond_Mill_Trailhead","driveTime":"65 minutes from downtown Portland","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.54796,45.6044]}},{"type":"Feature","properties":{"name":"Mount Hebo Trailhead","url":"https://www.oregonhikers.org/field_guide/Mount_Hebo_Trailhead","driveTime":"120 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.75515,45.21394]}},{"type":"Feature","properties":{"name":"Bell Camp Road Trailhead","url":"https://www.oregonhikers.org/field_guide/Bell_Camp_Road_Trailhead","driveTime":"65 minutes from downtown Portland","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.36721,45.69061]}},{"type":"Feature","properties":{"name":"Enchanted Valley, Oregon Trailhead","url":"https://www.oregonhikers.org/field_guide/Enchanted_Valley,_Oregon_Trailhead","driveTime":"3.25 hours","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-124.053,44.0603]}},{"type":"Feature","properties":{"name":"Cardwell Hill West Trailhead","url":"https://www.oregonhikers.org/field_guide/Cardwell_Hill_West_Trailhead","driveTime":"95 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.3947,44.5921]}},{"type":"Feature","properties":{"name":"Footbridge Trailhead","url":"https://www.oregonhikers.org/field_guide/Footbridge_Trailhead","driveTime":"65 minutes from downtown Portland","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.58491,45.56313]}},{"type":"Feature","properties":{"name":"Buxton Trailhead","url":"https://www.oregonhikers.org/field_guide/Buxton_Trailhead","driveTime":"40 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.18336,45.69855]}},{"type":"Feature","properties":{"name":"Elks Picnic Area Trailhead","url":"https://www.oregonhikers.org/field_guide/Elks_Picnic_Area_Trailhead","driveTime":"45 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.2052,45.47]}},{"type":"Feature","properties":{"name":"Beazell Forest Trailhead","url":"https://www.oregonhikers.org/field_guide/Beazell_Forest_Trailhead","driveTime":"2 hours","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.42527,44.65204]}},{"type":"Feature","properties":{"name":"Belding Trailhead","url":"https://www.oregonhikers.org/field_guide/Belding_Trailhead","driveTime":"2 hours","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.49452,45.70591]}},{"type":"Feature","properties":{"name":"North fork smith trailhead","url":"https://www.oregonhikers.org/field_guide/North_Fork_Smith_Trailhead","driveTime":"3.5 hours","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.8279,43.875]}},{"type":"Feature","properties":{"name":"Northrup Creek Big Tree Trailhead","url":"https://www.oregonhikers.org/field_guide/Northrup_Creek_Big_Tree_Trailhead","driveTime":"90 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.4545,46.0232]}},{"type":"Feature","properties":{"name":"Spruce Run Creek Trailhead","url":"https://www.oregonhikers.org/field_guide/Spruce_Run_Creek_Trailhead","driveTime":"75 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.6103,45.8116]}},{"type":"Feature","properties":{"name":"Kings Mountain Trailhead","url":"https://www.oregonhikers.org/field_guide/Kings_Mountain_Trailhead","driveTime":"1 hour","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.5063,45.5969]}},{"type":"Feature","properties":{"name":"Storey Burn Trailhead","url":"https://www.oregonhikers.org/field_guide/Storey_Burn_Trailhead","driveTime":"55 minutes from downtown Portland","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.38774,45.62775]}},{"type":"Feature","properties":{"name":"Upper Pioneer Indian Trailhead","url":"https://www.oregonhikers.org/field_guide/Upper_Pioneer_Indian_Trailhead","driveTime":"120 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.76251,45.21805]}},{"type":"Feature","properties":{"name":"Soapstone Lake Trailhead","url":"https://www.oregonhikers.org/field_guide/Soapstone_Lake_Trailhead","driveTime":"75 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.76236,45.84684]}},{"type":"Feature","properties":{"name":"Hebo Lake Trailhead","url":"https://www.oregonhikers.org/field_guide/Hebo_Lake_Trailhead","driveTime":"115 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.79559,45.23003]}},{"type":"Feature","properties":{"name":"Little South Fork Kilchis River Trailhead","url":"https://www.oregonhikers.org/field_guide/Little_South_Fork_Kilchis_River_Trailhead","driveTime":"110 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.75458,45.55645]}},{"type":"Feature","properties":{"name":"Stairstep Falls Trailhead","url":"https://www.oregonhikers.org/field_guide/Stairstep_Falls_Trailhead","driveTime":"100 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.4599,45.46532]}},{"type":"Feature","properties":{"name":"Purcell Creek Road Trailhead","url":"https://www.oregonhikers.org/field_guide/Purcell_Creek_Road_Trailhead","driveTime":"110 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.7949,45.5856]}},{"type":"Feature","properties":{"name":"Reehers Camp Trailhead","url":"https://www.oregonhikers.org/field_guide/Reehers_Camp_Trailhead","driveTime":"60 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.33793,45.70696]}},{"type":"Feature","properties":{"name":"Stagecoach Horse Camp Trailhead","url":"https://www.oregonhikers.org/field_guide/Stagecoach_Horse_Camp_Trailhead","driveTime":"65 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.41389,45.5971]}},{"type":"Feature","properties":{"name":"Sweet Creek Homestead Trailhead","url":"https://www.oregonhikers.org/field_guide/Sweet_Creek_Homestead_Trailhead","driveTime":"3 hours","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.9022,43.9579]}},{"type":"Feature","properties":{"name":"South Lake Trailhead","url":"https://www.oregonhikers.org/field_guide/South_Lake_Trailhead","driveTime":"135 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.7221,45.20276]}},{"type":"Feature","properties":{"name":"University Falls Trailhead","url":"https://www.oregonhikers.org/field_guide/University_Falls_Trailhead","driveTime":"60 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.39234,45.59841]}},{"type":"Feature","properties":{"name":"Peninsula Trailhead","url":"https://www.oregonhikers.org/field_guide/Peninsula_Trailhead","driveTime":"95 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.6717,45.4555]}},{"type":"Feature","properties":{"name":"Northrup Creek Trailhead","url":"https://www.oregonhikers.org/field_guide/Northrup_Creek_Trailhead","driveTime":"90 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.4557,46.0237]}},{"type":"Feature","properties":{"name":"Summit Trailhead","url":"https://www.oregonhikers.org/field_guide/Summit_Trailhead","driveTime":"50 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.3755,45.62394]}},{"type":"Feature","properties":{"name":"Side Step Trailhead","url":"https://www.oregonhikers.org/field_guide/Side_Step_Trailhead","driveTime":"65 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.40887,45.59885]}},{"type":"Feature","properties":{"name":"Rogers Camp Trailhead","url":"https://www.oregonhikers.org/field_guide/Rogers_Camp_Trailhead","driveTime":"50 minutes from downtown Portland","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.3757,45.6226]}},{"type":"Feature","properties":{"name":"Sweet Creek Wagon Road Trailhead","url":"https://www.oregonhikers.org/field_guide/Sweet_Creek_Wagon_Road_Trailhead","driveTime":"3 hours","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.9006,43.9415]}},{"type":"Feature","properties":{"name":"Munson Creek Falls Trailhead","url":"https://www.oregonhikers.org/field_guide/Munson_Creek_Falls_Trailhead","driveTime":"95 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.77353,45.36564]}},{"type":"Feature","properties":{"name":"North Fork Salmonberry Trailhead","url":"https://www.oregonhikers.org/field_guide/North_Fork_Salmonberry_Trailhead","driveTime":"2 hours","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.5062,45.72835]}},{"type":"Feature","properties":{"name":"Tophill Trailhead","url":"https://www.oregonhikers.org/field_guide/Tophill_Trailhead","driveTime":"45 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.20148,45.75838]}},{"type":"Feature","properties":{"name":"Liahona Loop Trailhead","url":"https://www.oregonhikers.org/field_guide/Liahona_Loop_Trailhead","driveTime":"85 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.04884,45.92732]}},{"type":"Feature","properties":{"name":"Maple Creek Road Trailhead","url":"https://www.oregonhikers.org/field_guide/Maple_Creek_Road_Trailhead","driveTime":"100 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.39333,45.46717]}},{"type":"Feature","properties":{"name":"Sweet Creek Beaver Creek Trailhead","url":"https://www.oregonhikers.org/field_guide/Sweet_Creek_Beaver_Creek_Trailhead","driveTime":"3 hours","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.8904,43.9414]}},{"type":"Feature","properties":{"name":"Idiot Creek Loop Road Trailhead","url":"https://www.oregonhikers.org/field_guide/Idiot_Creek_Loop_Road_Trailhead","driveTime":"80 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.4572,45.6146]}},{"type":"Feature","properties":{"name":"Nehalem Falls Trailhead","url":"https://www.oregonhikers.org/field_guide/Nehalem_Falls_Trailhead","driveTime":"110 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.77129,45.72649]}},{"type":"Feature","properties":{"name":"North Fork Nehalem Trailhead","url":"https://www.oregonhikers.org/field_guide/North_Fork_Nehalem_Trailhead","driveTime":"90 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.76696,45.81357]}},{"type":"Feature","properties":{"name":"Jackson Creek Trailhead","url":"https://www.oregonhikers.org/field_guide/Jackson_Creek_Trailhead","driveTime":"75 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-122.9093,45.6991]}},{"type":"Feature","properties":{"name":"Tillamook Forest Center Trailhead","url":"https://www.oregonhikers.org/field_guide/Tillamook_Forest_Center_Trailhead","driveTime":"1 hour from downtown Portland","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.56034,45.58518]}},{"type":"Feature","properties":{"name":"Vernonia Lake Trailhead","url":"https://www.oregonhikers.org/field_guide/Vernonia_Lake_Trailhead","driveTime":"1 hour","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.1746,45.85699]}},{"type":"Feature","properties":{"name":"Valley of the Giants Trailhead","url":"https://www.oregonhikers.org/field_guide/Valley_of_the_Giants_Trailhead","driveTime":"155 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.71554,44.93632]}},{"type":"Feature","properties":{"name":"Smith Homestead Trailhead","url":"https://www.oregonhikers.org/field_guide/Smith_Homestead_Trailhead","driveTime":"1 hour","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.5521,45.5874]}},{"type":"Feature","properties":{"name":"Salmonberry Trailhead","url":"https://www.oregonhikers.org/field_guide/Salmonberry_Trailhead","driveTime":"90 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.65223,45.75001]}},{"type":"Feature","properties":{"name":"Niagara Falls Trailhead","url":"https://www.oregonhikers.org/field_guide/Niagara_Falls_Trailhead","driveTime":"2 hours","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.6378,45.2259]}},{"type":"Feature","properties":{"name":"Sawtooth Road Trailhead","url":"https://www.oregonhikers.org/field_guide/Sawtooth_Road_Trailhead","driveTime":"2 hours","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.74187,45.62233]}},{"type":"Feature","properties":{"name":"Whittaker Creek Trailhead","url":"https://www.oregonhikers.org/field_guide/Whittaker_Creek_Trailhead","driveTime":"m Eugene; 35 minutes from Florence","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.662,43.9858]}},{"type":"Feature","properties":{"name":"Vernonia Trailhead","url":"https://www.oregonhikers.org/field_guide/Vernonia_Trailhead","driveTime":"1 hour","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.19399,45.85681]}},{"type":"Feature","properties":{"name":"Sunset Rest Area Trailhead","url":"https://www.oregonhikers.org/field_guide/Sunset_Rest_Area_Trailhead","driveTime":"50 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.4589,45.7963]}},{"type":"Feature","properties":{"name":"Sam Downs Creek Trailhead","url":"https://www.oregonhikers.org/field_guide/Sam_Downs_Creek_Trailhead","driveTime":"110 minutes","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.752,45.5494]}},{"type":"Feature","properties":{"name":"Sweet Creek Falls Trailhead","url":"https://www.oregonhikers.org/field_guide/Sweet_Creek_Falls_Trailhead","driveTime":"3 hours","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-123.9014,43.9514]}},{"type":"Feature","properties":{"name":"Riverview Trailhead","url":"https://www.oregonhikers.org/field_guide/Riverview_Trailhead","driveTime":"m Brookings","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-124.1873,42.1126]}},{"type":"Feature","properties":{"name":"Redwood Nature Trailhead","url":"https://www.oregonhikers.org/field_guide/Redwood_Nature_Trailhead","driveTime":"m Brookings","icon":"campsite"},"geometry":{"type":"Point","coordinates":[-124.19582,42.11873]}}]
-            }
+              "features":
+              [
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "North Fork Nehalem Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/North_Fork_Nehalem_Trailhead",
+                    "driveTime": "90 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.76696,
+                      45.81357
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Munson Creek Falls Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Munson_Creek_Falls_Trailhead",
+                    "driveTime": "95 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.77353,
+                      45.36564
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Side Step Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Side_Step_Trailhead",
+                    "driveTime": "65 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.40887,
+                      45.59885
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Northrup Creek Winter Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Northrup_Creek_Winter_Trailhead",
+                    "driveTime": "85 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.4322,
+                      46.0065
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Bell Camp Road Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Bell_Camp_Road_Trailhead",
+                    "driveTime": "65 minutes from downtown Portland",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.36721,
+                      45.69061
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Kings Mountain Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Kings_Mountain_Trailhead",
+                    "driveTime": "1 hour",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.5063,
+                      45.5969
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Maple Creek Road Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Maple_Creek_Road_Trailhead",
+                    "driveTime": "100 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.39333,
+                      45.46717
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Nehalem Falls Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Nehalem_Falls_Trailhead",
+                    "driveTime": "110 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.77129,
+                      45.72649
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Niagara Falls Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Niagara_Falls_Trailhead",
+                    "driveTime": "2 hours",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.6378,
+                      45.2259
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Bloom Lake Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Bloom_Lake_Trailhead",
+                    "driveTime": "60 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.5136,
+                      45.838
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Rogers Camp Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Rogers_Camp_Trailhead",
+                    "driveTime": "50 minutes from downtown Portland",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.3757,
+                      45.6226
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "South Lake Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/South_Lake_Trailhead",
+                    "driveTime": "135 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.7221,
+                      45.20276
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Storey Burn Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Storey_Burn_Trailhead",
+                    "driveTime": "55 minutes from downtown Portland",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.38774,
+                      45.62775
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Reehers Camp Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Reehers_Camp_Trailhead",
+                    "driveTime": "60 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.33793,
+                      45.70696
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Smith Homestead Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Smith_Homestead_Trailhead",
+                    "driveTime": "1 hour",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.5521,
+                      45.5874
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Sawtooth Road Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Sawtooth_Road_Trailhead",
+                    "driveTime": "2 hours",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.74187,
+                      45.62233
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Clayhill Horse Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Clayhill_Horse_Trailhead",
+                    "driveTime": "45 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.1847,
+                      45.7479
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Stagecoach Horse Camp Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Stagecoach_Horse_Camp_Trailhead",
+                    "driveTime": "65 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.41389,
+                      45.5971
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Cedar Butte Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Cedar_Butte_Trailhead",
+                    "driveTime": "80 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.646,
+                      45.5828
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Beaver Creek Trailhead (Banks-Vernonia)",
+                    "url": "https://www.oregonhikers.org/field_guide/Beaver_Creek_Trailhead_(Banks-Vernonia)",
+                    "driveTime": "50 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.23117,
+                      45.81067
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Buxton Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Buxton_Trailhead",
+                    "driveTime": "40 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.18336,
+                      45.69855
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Footbridge Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Footbridge_Trailhead",
+                    "driveTime": "65 minutes from downtown Portland",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.58491,
+                      45.56313
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Gnat Creek Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Gnat_Creek_Trailhead",
+                    "driveTime": "90 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.50193,
+                      46.17728
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Cougar Valley Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Cougar_Valley_Trailhead",
+                    "driveTime": "110 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.76176,
+                      45.71335
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Purcell Creek Road Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Purcell_Creek_Road_Trailhead",
+                    "driveTime": "110 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.7949,
+                      45.5856
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "North Fork Salmonberry Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/North_Fork_Salmonberry_Trailhead",
+                    "driveTime": "2 hours",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.5062,
+                      45.72835
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Cochran Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Cochran_Trailhead",
+                    "driveTime": "70 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.41114,
+                      45.70453
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Diamond Mill Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Diamond_Mill_Trailhead",
+                    "driveTime": "65 minutes from downtown Portland",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.54796,
+                      45.6044
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Little South Fork Kilchis River Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Little_South_Fork_Kilchis_River_Trailhead",
+                    "driveTime": "110 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.75458,
+                      45.55645
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Beaver Falls Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Beaver_Falls_Trailhead",
+                    "driveTime": "80 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.12982,
+                      46.10387
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Summit Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Summit_Trailhead",
+                    "driveTime": "50 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.3755,
+                      45.62394
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Jones Creek Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Jones_Creek_Trailhead",
+                    "driveTime": "1 hour from downtown Portland",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.55602,
+                      45.58795
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Sunset Rest Area Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Sunset_Rest_Area_Trailhead",
+                    "driveTime": "50 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.4589,
+                      45.7963
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Hebo Lake Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Hebo_Lake_Trailhead",
+                    "driveTime": "115 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.79559,
+                      45.23003
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Hilltop Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Hilltop_Trailhead",
+                    "driveTime": "45 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.1861,
+                      45.7417
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Keenig Creek Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Keenig_Creek_Trailhead",
+                    "driveTime": "70 minutes from downtown Portland",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.61223,
+                      45.54342
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Spruce Run Creek Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Spruce_Run_Creek_Trailhead",
+                    "driveTime": "75 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.6103,
+                      45.8116
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Jackson Creek Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Jackson_Creek_Trailhead",
+                    "driveTime": "75 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -122.9093,
+                      45.6991
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Stairstep Falls Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Stairstep_Falls_Trailhead",
+                    "driveTime": "100 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.4599,
+                      45.46532
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Tillamook Forest Center Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Tillamook_Forest_Center_Trailhead",
+                    "driveTime": "1 hour from downtown Portland",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.56034,
+                      45.58518
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Soapstone Lake Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Soapstone_Lake_Trailhead",
+                    "driveTime": "75 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.76236,
+                      45.84684
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Gnat Creek Hatchery Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Gnat_Creek_Hatchery_Trailhead",
+                    "driveTime": "90 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.48801,
+                      46.16918
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Lee Falls Road Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Lee_Falls_Road_Trailhead",
+                    "driveTime": "70 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.2574,
+                      45.4522
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Elk Creek Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Elk_Creek_Trailhead",
+                    "driveTime": "1 hour",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.4666,
+                      45.6103
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Northrup Creek Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Northrup_Creek_Trailhead",
+                    "driveTime": "90 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.4557,
+                      46.0237
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Tophill Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Tophill_Trailhead",
+                    "driveTime": "45 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.20148,
+                      45.75838
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Vernonia Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Vernonia_Trailhead",
+                    "driveTime": "1 hour",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.19399,
+                      45.85681
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Sam Downs Creek Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Sam_Downs_Creek_Trailhead",
+                    "driveTime": "110 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.752,
+                      45.5494
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Four County Point Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Four_County_Point_Trailhead",
+                    "driveTime": "50 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.3517,
+                      45.7805
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Upper Pioneer Indian Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Upper_Pioneer_Indian_Trailhead",
+                    "driveTime": "120 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.76251,
+                      45.21805
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Vernonia Lake Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Vernonia_Lake_Trailhead",
+                    "driveTime": "1 hour",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.1746,
+                      45.85699
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Salmonberry Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Salmonberry_Trailhead",
+                    "driveTime": "90 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.65223,
+                      45.75001
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Belding Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Belding_Trailhead",
+                    "driveTime": "2 hours",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.49452,
+                      45.70591
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Deyoe Creek Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Deyoe_Creek_Trailhead",
+                    "driveTime": "55 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.36677,
+                      45.61428
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Gales Creek Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Gales_Creek_Trailhead",
+                    "driveTime": "50 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.35926,
+                      45.64231
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Idiot Creek Loop Road Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Idiot_Creek_Loop_Road_Trailhead",
+                    "driveTime": "80 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.4572,
+                      45.6146
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "University Falls Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/University_Falls_Trailhead",
+                    "driveTime": "60 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.39234,
+                      45.59841
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Liahona Loop Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Liahona_Loop_Trailhead",
+                    "driveTime": "85 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.04884,
+                      45.92732
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Gales Creek Winter Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Gales_Creek_Winter_Trailhead",
+                    "driveTime": "45 minutes from downtown Portland",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.34723,
+                      45.64527
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Peninsula Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Peninsula_Trailhead",
+                    "driveTime": "95 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.6717,
+                      45.4555
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Elks Picnic Area Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Elks_Picnic_Area_Trailhead",
+                    "driveTime": "45 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.2052,
+                      45.47
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Mount Hebo Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Mount_Hebo_Trailhead",
+                    "driveTime": "120 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.75515,
+                      45.21394
+                    ]
+                  }
+                },
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "Northrup Creek Big Tree Trailhead",
+                    "url": "https://www.oregonhikers.org/field_guide/Northrup_Creek_Big_Tree_Trailhead",
+                    "driveTime": "90 minutes",
+                    "icon": "triangle"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                      -123.4545,
+                      46.0232
+                    ]
+                  }
+                }
+              ]
+          }
         },
           "layout": {
           "icon-image": "{icon}-15",
@@ -49,26 +1037,726 @@ map.on('load', function () {
         }
       });
 
+
+
       map.addLayer({
       "id": "route",
       "type": "line",
       "source": {
           "type": "geojson",
-          "data": {"type":"FeatureCollection","features":[{"type":"Feature","properties":{"id":"74428dc4-1018-4194-8696-82e6002378a9","updated_date":"2018-05-19T06:11:53Z","time_created":"2018-05-19T06:11:53Z","last_updated_on_server":"2018-05-19T06:11:53.592","db_insert_date":"2018-05-19T06:11:53Z","deleted":false,"title":"friday jaunt mostly right track","public":false,"color":"#ffff00","hexcolor":"#ffff00","is_active":true,"revision":14,"notes":"","track_type":"route","routing_mode":"pedestrian","uploaded_gpx_to_osm":null,"flag":null,"source":null,"cover_photo_id":null,"distance":30116.2721092911,"total_ascent":324.967117900993,"total_descent":327.008029217893,"stopped_time":0.0,"total_time":0.0,"average_speed":0,"moving_time":0.0,"moving_speed":0,"preferred_link":"/datasummary/track/74428dc4-1018-4194-8696-82e6002378a9/","user_displayname":"taylor.morris","username":"taylor.morris@gmail.com","user_email":"taylor.morris@gmail.com","user_id":515547,"favorite_count":0,"comment_count":0,"user_photo_count":0,"latitude":45.541856537702195,"longitude":-122.63248158545409},"style":{"stroke":"#ffff00"},"geometry":{"type":"MultiLineString","coordinates":[[[-122.615135908,45.5146398496,57.8549113169,0.0],[-122.614750968,45.5146454702,58.0,0.0],[-122.614366028,45.5146510895,59.0262222156,0.0],[-122.61410594,45.5146548855,59.9762043813,0.0],[-122.61410141,45.5149246633,60.406130741,0.0],[-122.614096881,45.5151944412,60.3265995532,0.0],[-122.614095211,45.5152939105,60.2423003837,0.0],[-122.613710193,45.5152919714,61.5922088183,0.0],[-122.613325175,45.515290031,62.9571839488,0.0],[-122.612940157,45.5152880894,63.0154217052,0.0],[-122.612603903,45.5152863926,63.0310132161,0.0],[-122.612572,45.515415,63.494,0.0],[-122.611245,45.515407,66.1906264,0.0],[-122.611062,45.515403,66.99869856,0.0],[-122.610276,45.515403,72.47,0.0],[-122.610077,45.515403,74.6192,0.0],[-122.609307,45.515403,79.44611168,0.0],[-122.608857,45.515399,81.05009872,0.0],[-122.608857,45.515399,81.05009872,0.0],[-122.608841,45.516544,80.09626816,0.0],[-122.608841,45.517478,77.19970816,0.0],[-122.608849,45.518577,66.89166816,0.0],[-122.608834,45.519207,67.17389152,0.0],[-122.608857,45.519264,67.39062592,0.0],[-122.608857,45.519264,67.39062592,0.0],[-122.60888,45.51934,67.643968,0.0],[-122.608864,45.522716,65.10952704,0.0],[-122.608864,45.522888,65.4864,0.0],[-122.608864,45.522888,65.4864,0.0],[-122.608864,45.523052,66.0768,0.0],[-122.608887,45.523651,65.41297648,0.0],[-122.608870268,45.5236531917,65.2701229865,0.0],[-122.609255353,45.5236531934,64.9716158104,0.0],[-122.609640439,45.5236531938,64.394009906,0.0],[-122.610025524,45.5236531928,62.4675515114,0.0],[-122.610243559,45.5236531917,61.8015457812,0.0],[-122.610239462,45.5239229729,59.7545947861,0.0],[-122.610235366,45.5241927542,57.9060850149,0.0],[-122.61023283,45.5243597647,57.3048471024,0.0],[-122.609847846,45.524366088,57.8298390844,0.0],[-122.609462861,45.52437241,58.9508932317,0.0],[-122.609077876,45.5243787307,59.2365696569,0.0],[-122.60888,45.524368,59.2752,0.0],[-122.60888,45.525077,58.5544,0.0],[-122.608872,45.525791,63.79606592,0.0],[-122.60888,45.526409,65.0700832,0.0],[-122.608887,45.5265,65.39728,0.0],[-122.608895,45.526592,65.7252864,0.0],[-122.608864,45.527225,62.881296,0.0],[-122.608864,45.527263,62.48315328,0.0],[-122.608849,45.527957,61.434,0.0],[-122.608841,45.528213,63.8728,0.0],[-122.608841,45.528331,65.1472,0.0],[-122.608803,45.529716,67.00692608,0.0],[-122.608788,45.530418,68.1416,0.0],[-122.608796,45.530418,68.1704,0.0],[-122.608803,45.530418,68.1956,0.0],[-122.608819,45.530422,68.2676,0.0],[-122.608834,45.530429,68.3468,0.0],[-122.608841,45.530441,68.4152,0.0],[-122.608849,45.530445,68.4584,0.0],[-122.608849,45.530456,68.498,0.0],[-122.608857,45.530464,68.5556,0.0],[-122.608849,45.530471,68.552,0.0],[-122.608849,45.530483,68.5952,0.0],[-122.608841,45.53049,68.5916,0.0],[-122.608834,45.530498,68.5952,0.0],[-122.608819,45.530506,68.57,0.0],[-122.608803,45.530509,68.5232,0.0],[-122.608788,45.530509,68.4692,0.0],[-122.608788,45.530838,69.6536,0.0],[-122.608788,45.531208,70.51011584,0.0],[-122.608788,45.531333,70.34667584,0.0],[-122.608811,45.532268,68.1648,0.0],[-122.608811,45.532455,68.838,0.0],[-122.608803,45.532947,70.9184,0.0],[-122.608819,45.532947,70.8608,0.0],[-122.608834,45.532955,70.8356,0.0],[-122.608841,45.532962,70.8356,0.0],[-122.608849,45.532966,70.8212,0.0],[-122.608857,45.532978,70.8356,0.0],[-122.608857,45.532985,70.8608,0.0],[-122.608857,45.532989,70.8752,0.0],[-122.608857,45.532997,70.904,0.0],[-122.608849,45.533008,70.9724,0.0],[-122.608841,45.533016,71.03,0.0],[-122.608834,45.533023,71.0804,0.0],[-122.608826,45.533027,71.1236,0.0],[-122.608803,45.533031,71.2208,0.0],[-122.608803,45.533657,69.10215968,0.0],[-122.608857,45.533721,69.09082976,0.0],[-122.60875,45.533721,69.3956,0.0],[-122.60875,45.533721,69.3956,0.0],[-122.608857,45.533721,69.09082976,0.0],[-122.608902,45.533786,68.98251712,0.0],[-122.608902,45.535121,69.46223968,0.0],[-122.608902,45.536506,68.44890048,0.0],[-122.608902,45.536506,68.44890048,0.0],[-122.607888,45.536506,69.34889088,0.0],[-122.606873,45.536506,69.7428,0.0],[-122.605858,45.536502,69.0,0.0],[-122.605332,45.536502,68.0,0.0],[-122.604813,45.536502,67.19372704,0.0],[-122.604683,45.536537,67.0,0.0],[-122.604561,45.536563,67.0,0.0],[-122.603646,45.53656,65.0,0.0],[-122.602631,45.536548,69.16986496,0.0],[-122.601578,45.536556,68.42073856,0.0],[-122.600907,45.536552,65.89865088,0.0],[-122.600571,45.536552,65.5872,0.0],[-122.600564,45.536552,65.5872,0.0],[-122.600075,45.536552,63.8572,0.0],[-122.599511,45.536552,63.54541376,0.0],[-122.599511,45.536609,63.65228192,0.0],[-122.599461079,45.5366106294,63.7625436696,0.0],[-122.599461079,45.5368804259,63.9861989284,0.0],[-122.599461079,45.5371502224,64.0,0.0],[-122.599511,45.537338,63.68306528,0.0],[-122.598565,45.53733,64.836,0.0],[-122.597626,45.537326,64.2528,0.0],[-122.596795,45.537322,67.0904496,0.0],[-122.596688,45.537322,67.61401344,0.0],[-122.596573,45.537326,68.21037792,0.0],[-122.596306,45.537326,69.19623552,0.0],[-122.5962,45.537326,69.292704,0.0],[-122.596024,45.537315,69.0204,0.0],[-122.59591,45.537311,68.5956,0.0],[-122.595696,45.537296,68.76,0.0],[-122.595093,45.53725,71.7652,0.0],[-122.59446,45.537204,71.0486528,0.0],[-122.594368,45.5372,70.196416,0.0],[-122.594254,45.537197,69.0054524801,0.0],[-122.59414,45.537113,68.1429472,0.0],[-122.594117,45.537113,67.92710416,0.0],[-122.591408,45.537086,69.54466048,0.0],[-122.591378,45.537082,69.4952,0.0],[-122.591279,45.537166,69.7976,0.0],[-122.590371,45.537155,66.7383848,0.0],[-122.590241,45.537155,66.484,0.0],[-122.590149,45.537162,66.4336,0.0],[-122.589524,45.537223,66.71279808,0.0],[-122.58931,45.537246,67.9265696,0.0],[-122.58931,45.537246,67.9265696,0.0],[-122.589264,45.537349,68.00272256,0.0],[-122.589287,45.537677,68.56516496,0.0],[-122.58931,45.537956,69.2990656,0.0],[-122.589318,45.538043,69.43057504,0.0],[-122.589325,45.538162,70.1964,0.0],[-122.589333,45.538238,70.7148,0.0],[-122.589348,45.538299,71.1,0.0],[-122.589371,45.538364,71.50803072,0.0],[-122.589463,45.538536,73.1888,0.0],[-122.589707,45.539016,72.10987648,0.0],[-122.589737,45.53907,71.5549136,0.0],[-122.589745,45.539131,71.0213288001,0.0],[-122.589753,45.539184,70.6676,0.0],[-122.589745,45.539234,70.7540000001,0.0],[-122.58973,45.53931,70.916,0.0],[-122.589631,45.539695,70.4264,0.0],[-122.589615,45.539775,69.246,0.0],[-122.589585,45.539924,66.1356,0.0],[-122.589577,45.54,64.5228,0.0],[-122.58957,45.540081,63.8050032,0.0],[-122.589577,45.540164,63.03333888,0.0],[-122.589585,45.540271,62.0608536,0.0],[-122.589608,45.540351,62.2636,0.0],[-122.589631,45.540451,62.6236,0.0],[-122.589936,45.541183,67.9755724799,0.0],[-122.590027,45.541423,71.62593616,0.0],[-122.590073,45.541492,72.95355136,0.0],[-122.590119,45.541553,74.20709872,0.0],[-122.590165,45.541599,75.2313016,0.0],[-122.590226,45.541648,76.42292608,0.0],[-122.590264,45.541667,76.95411904,0.0],[-122.59031,45.54169,77.252,0.0],[-122.590378,45.541717,77.5436,0.0],[-122.590447,45.541736,77.7488,0.0],[-122.590539,45.541751,77.9108,0.0],[-122.590638,45.541759,77.9972,0.0],[-122.590836,45.541767,78.07133504,0.0],[-122.591065,45.541774,77.1357151999,0.0],[-122.591324,45.541774,77.9945369599,0.0],[-122.591584,45.54177,78.9344,0.0],[-122.591614,45.541778,79.2152,0.0],[-122.591637,45.541786,79.4708000001,0.0],[-122.591645,45.541801,79.8236,0.0],[-122.591668,45.541847,80.8887161599,0.0],[-122.591668,45.541847,80.8887161599,0.0],[-122.590691,45.541942,79.9736,0.0],[-122.590241,45.54198,80.2604,0.0],[-122.590233,45.542022,80.4404,0.0],[-122.590233,45.542022,80.4404,0.0],[-122.590241,45.54198,80.2604,0.0],[-122.589776,45.541988,79.544,0.0],[-122.589661,45.541984,78.73298496,0.0],[-122.589081,45.54198,76.9870752,0.0],[-122.587983,45.541988,76.87311232,0.0],[-122.587006,45.541988,76.30605312,0.0],[-122.586037,45.541988,79.4664,0.0],[-122.586007,45.541988,79.2504,0.0],[-122.585724,45.541984,77.6064,0.0],[-122.584519,45.54198,76.256,0.0],[-122.584443,45.541988,76.31278464,0.0],[-122.584443,45.541988,76.31278464,0.0],[-122.584404,45.541992,76.31747328,0.0],[-122.584282,45.542034,76.45626048,0.0],[-122.584176,45.542098,76.57137408,0.0],[-122.584099,45.542175,76.871412,0.0],[-122.584069,45.54224,77.0414976,0.0],[-122.584061,45.542293,77.15787408,0.0],[-122.584061,45.542438,77.48130528,0.0],[-122.584008,45.542682,78.084,0.0],[-122.583993,45.543392,80.0,0.0],[-122.583977,45.544109,79.5248,0.0],[-122.583977,45.544448,78.31313984,0.0],[-122.583962,45.544486,78.22382528,0.0],[-122.583939,45.544544,78.11574464,0.0],[-122.583893,45.544612,78.00587264,0.0],[-122.583863,45.546371,81.82560416,0.0],[-122.583832,45.548179,77.53541312,0.0],[-122.583802,45.54961,75.4391712,0.0],[-122.583794,45.550243,72.63476832,0.0],[-122.583794,45.550346,72.01210304,0.0],[-122.583787,45.550445,71.5439864,0.0],[-122.583779,45.551033,69.2812,0.0],[-122.583779,45.551033,69.2812,0.0],[-122.584267,45.551036,68.5408,0.0],[-122.584786,45.551044,69.29707136,0.0],[-122.585801,45.551048,69.59724608,0.0],[-122.586823,45.551055,71.4491144,0.0],[-122.58783,45.551059,70.3752,0.0],[-122.588837,45.551071,71.11742608,0.0],[-122.588837,45.551071,71.11742608,0.0],[-122.588807,45.552467,66.91622224,0.0],[-122.588776,45.553867,59.78322432,0.0],[-122.588746,45.555438,52.17670592,0.0],[-122.588692,45.555438,51.70563584,0.0],[-122.588692,45.555438,51.70563584,0.0],[-122.588746,45.555438,52.17670592,0.0],[-122.588906,45.555438,53.5630073599,0.0],[-122.589005,45.555438,54.3718928,0.0],[-122.589005,45.555438,54.3718928,0.0],[-122.58899,45.555934,49.2752,0.0],[-122.588982,45.556053,48.4184,0.0],[-122.588974,45.556125,48.0,0.0],[-122.588959,45.556255,48.0,0.0],[-122.588952,45.556365,48.0,0.0],[-122.588944,45.5568,48.095232,0.0],[-122.588936,45.557598,47.76686976,0.0],[-122.588929,45.557884,46.85118144,0.0],[-122.588929,45.558158,45.35354528,0.0],[-122.588921,45.558692,42.66052544,0.0],[-122.588913,45.559066,42.66905632,0.0],[-122.588913,45.559234,42.77864032,0.0],[-122.588646,45.559234,41.22075456,0.0],[-122.588646,45.559234,41.22075456,0.0],[-122.588913,45.559234,42.77864032,0.0],[-122.588913,45.559066,42.66905632,0.0],[-122.58918,45.559066,43.0,0.0],[-122.58918,45.559066,43.0,0.0],[-122.590348,45.559074,41.33773184,0.0],[-122.59121,45.559078,43.0,0.0],[-122.591782,45.559078,43.0,0.0],[-122.59327,45.559082,41.0034112,0.0],[-122.593377,45.559082,41.02368544,0.0],[-122.594994,45.559097,45.2508,0.0],[-122.595276,45.559101,45.2364,0.0],[-122.596764,45.559093,46.6156,0.0],[-122.597794,45.559101,47.7636,0.0],[-122.597756,45.559146,47.9256,0.0],[-122.597756,45.559146,47.9256,0.0],[-122.597794,45.559101,47.7636,0.0],[-122.598542,45.559101,45.4852,0.0],[-122.599274,45.559104,45.8376,0.0],[-122.599625,45.559104,46.4512,0.0],[-122.600861,45.559108,48.28976448,0.0],[-122.602143,45.559112,49.85932736,0.0],[-122.604424,45.55912,52.1191296,0.0],[-122.605103,45.55912,53.1245888,0.0],[-122.60537,45.55912,53.612224,0.0],[-122.605515,45.55912,54.046528,0.0],[-122.605729,45.55912,53.6484992,0.0],[-122.607003,45.559123,54.368,0.0],[-122.607995,45.559123,52.3752,0.0],[-122.608132,45.559123,52.11393856,0.0],[-122.609574,45.559127,53.67580192,0.0],[-122.610459,45.559131,54.476,0.0],[-122.612046,45.559139,53.5951862401,0.0],[-122.612549,45.559143,56.3528,0.0],[-122.613251,45.559143,59.0,0.0],[-122.614754,45.559154,59.06358336,0.0],[-122.614853,45.55915,59.382552,0.0],[-122.61496,45.559143,59.6978688,0.0],[-122.615029,45.559135,59.7839016,0.0],[-122.615098,45.55912,59.7232704,0.0],[-122.615174,45.559097,59.65550112,0.0],[-122.61525,45.55907,59.6172,0.0],[-122.615426,45.558982,59.68993728,0.0],[-122.615525,45.55894,59.91024,0.0],[-122.615593,45.558917,59.8652,0.0],[-122.615654,45.558902,59.6456,0.0],[-122.615716,45.558891,59.4224,0.0],[-122.615784,45.558883,59.19126976,0.0],[-122.615891,45.558879,58.83539056,0.0],[-122.616112,45.558879,58.0712,0.0],[-122.617211,45.558883,58.97965648,0.0],[-122.61834,45.558891,58.0392,0.0],[-122.619721,45.558898,59.93894432,0.0],[-122.620362,45.558898,59.94434496,0.0],[-122.620362,45.558898,59.94434496,0.0],[-122.620415,45.558898,59.9506032,0.0],[-122.620415,45.560237,57.3472,0.0],[-122.620415,45.560924,55.5003584,0.0],[-122.620415,45.561309,54.1420744,0.0],[-122.620415,45.561309,54.1420744,0.0],[-122.620415,45.561492,53.4409728,0.0],[-122.620415,45.561546,53.1482064,0.0],[-122.620415,45.561985,50.781876,0.0],[-122.620415,45.562431,49.1256904,0.0],[-122.620408,45.562713,48.59267584,0.0],[-122.620415,45.562805,48.494,0.0],[-122.620415,45.562805,48.494,0.0],[-122.620507,45.562805,48.8252,0.0],[-122.620896,45.562801,50.20673984,0.0],[-122.62143,45.562793,49.9918896,0.0],[-122.622445,45.562786,49.7428,0.0],[-122.623459,45.562774,50.4524,0.0],[-122.624474,45.562767,53.10227168,0.0],[-122.625451,45.562759,52.55375536,0.0],[-122.625527,45.562755,52.3403704,0.0],[-122.625527,45.562755,52.3403704,0.0],[-122.625535,45.562828,51.6856416,0.0],[-122.625542,45.563495,49.418,0.0],[-122.625542,45.563884,47.08314112,0.0],[-122.625542,45.564098,46.36947328,0.0],[-122.625542,45.564777,46.84197664,0.0],[-122.625542,45.564853,46.55502496,0.0],[-122.625542,45.56512,44.7250816,0.0],[-122.625542,45.56512,44.7250816,0.0],[-122.625542,45.566112,41.0488,0.0],[-122.625542,45.566341,41.0488,0.0],[-122.625542,45.566455,40.8108,0.0],[-122.625542,45.566528,40.548,0.0],[-122.62555,45.567375,37.459,0.0],[-122.625542,45.56818,38.0386496,0.0],[-122.625542,45.56818,38.0386496,0.0],[-122.625542,45.568218,38.06535296,0.0],[-122.62555,45.568218,38.026784,0.0],[-122.625557,45.568218,38.00431808,0.0],[-122.625557,45.568222,38.00416832,0.0],[-122.625565,45.568222,38.0272544,0.0],[-122.625573,45.568225,38.048984,0.0],[-122.62558,45.568229,38.0661056,0.0],[-122.62558,45.568233,38.0635712,0.0],[-122.625588,45.568237,38.08101248,0.0],[-122.625588,45.568241,38.07764864,0.0],[-122.625596,45.568244,38.09364992,0.0],[-122.625596,45.568248,38.08945664,0.0],[-122.625596,45.568252,38.08526336,0.0],[-122.625596,45.568256,38.08107008,0.0],[-122.626603,45.568252,39.90501952,0.0],[-122.62687,45.568252,39.7856704,0.0],[-122.627617,45.568252,38.82372736,0.0],[-122.628281,45.568248,37.13052352,0.0],[-122.628632,45.568248,38.05209856,0.0],[-122.629578,45.568248,35.66690176,0.0],[-122.629578,45.568256,35.65305472,0.0],[-122.629586,45.56826,35.6249344,0.0],[-122.629586,45.568267,35.61209248,0.0],[-122.629586,45.568271,35.60475424,0.0],[-122.629593,45.568275,35.577508,0.0],[-122.629601,45.568279,35.54664016,0.0],[-122.629609,45.568286,35.50854496,0.0],[-122.629616,45.568286,35.48763904,0.0],[-122.629624,45.56829,35.4544384,0.0],[-122.629632,45.568294,35.42040832,0.0],[-122.629639,45.568294,35.39877664,0.0],[-122.629647,45.568294,35.37405472,0.0],[-122.629647,45.568294,35.37405472,0.0],[-122.629654,45.568294,35.35242304,0.0],[-122.629662,45.568294,35.32770112,0.0],[-122.62967,45.56829,35.314672,0.0],[-122.629677,45.56829,35.2934032,0.0],[-122.629685,45.568286,35.2815664,0.0],[-122.629693,45.568283,35.26733776,0.0],[-122.6297,45.568279,35.259952,0.0],[-122.6297,45.568275,35.2732,0.0],[-122.629708,45.568267,35.27777344,0.0],[-122.629708,45.568264,35.28802048,0.0],[-122.629715,45.568256,35.2971616,0.0],[-122.629715,45.568252,35.3111872,0.0],[-122.629715,45.568248,35.3252128,0.0],[-122.63028,45.568244,36.2995456,0.0],[-122.63041,45.568244,37.0685632,0.0],[-122.630616,45.568244,38.00723968,0.0],[-122.630639,45.568237,38.1728425599,0.0],[-122.630669,45.568237,38.2059337599,0.0],[-122.630684,45.568244,38.09458432,0.0],[-122.630761,45.568244,38.19348928,0.0],[-122.631196,45.568241,38.20121856,0.0],[-122.63173,45.568241,40.456,0.0],[-122.631875,45.568241,41.5,0.0],[-122.632264,45.568241,42.13158592,0.0],[-122.632798,45.568241,39.87579872,0.0],[-122.633332,45.568237,38.69212928,0.0],[-122.633584,45.568237,39.90895232,0.0],[-122.633866,45.568237,43.3925763199,0.0],[-122.6344,45.568237,43.6668,0.0],[-122.634934,45.568237,41.2376,0.0],[-122.635323,45.568237,41.62251808,0.0],[-122.635483,45.568237,42.5980316799,0.0],[-122.63601,45.568233,43.6213536,0.0],[-122.636544,45.568233,44.9196,0.0],[-122.637078,45.568229,45.39002304,0.0],[-122.637177,45.568229,45.12229536,0.0],[-122.63762,45.568229,42.8662592,0.0],[-122.638146,45.568229,39.1268,0.0],[-122.638146,45.568229,39.1268,0.0],[-122.63868,45.568225,41.33056,0.0],[-122.638886,45.568225,42.976912,0.0],[-122.639222,45.568225,44.1992,0.0],[-122.639756,45.568225,45.220976,0.0],[-122.64029,45.568222,42.9736352,0.0],[-122.640824,45.568222,42.78813312,0.0],[-122.6409,45.568222,42.8016,0.0],[-122.641358,45.568222,42.8016,0.0],[-122.641892,45.568218,44.11598976,0.0],[-122.642426,45.568218,46.1488,0.0],[-122.642586,45.568218,46.59625408,0.0],[-122.642945,45.568218,46.2959008,0.0],[-122.643502,45.568214,47.15685312,0.0],[-122.644051,45.568214,49.5776000001,0.0],[-122.644433,45.568222,47.67742592,0.0],[-122.644486,45.568229,47.3528,0.0],[-122.644532,45.568241,47.0144,0.0],[-122.644898,45.568378,44.08830848,0.0],[-122.645058,45.568431,43.78378592,0.0],[-122.645096,45.568435,43.8531104,0.0],[-122.645165,45.568435,44.010596,0.0],[-122.646027,45.568435,47.6624,0.0],[-122.646637,45.568435,46.4138888,0.0],[-122.646637,45.568435,46.4138888,0.0],[-122.646775,45.568435,46.02074,0.0],[-122.647011,45.568439,45.71074384,0.0],[-122.648003,45.568439,46.1892,0.0],[-122.648346,45.568439,45.64785376,0.0],[-122.648522,45.568439,46.04043232,0.0],[-122.648995,45.568439,47.8588,0.0],[-122.650033,45.568443,49.724,0.0],[-122.650994,45.568439,49.83962336,0.0],[-122.651734,45.568439,50.04579104,0.0],[-122.651734,45.568439,50.04579104,0.0],[-122.651742,45.56842,49.9561856,0.0],[-122.651757,45.568408,49.85618624,0.0],[-122.65178,45.568389,49.7106368,0.0],[-122.651932,45.56829,49.3428224,0.0],[-122.651955,45.568279,49.4292,0.0],[-122.651978,45.568267,49.5984,0.0],[-122.651986,45.568256,49.7064,0.0],[-122.652047,45.568283,49.7316,0.0],[-122.652062,45.568286,49.764,0.0],[-122.652077,45.568286,49.818,0.0],[-122.652268,45.568286,50.36888192,0.0],[-122.652298,45.568286,50.38728512,0.0],[-122.652321,45.56829,50.3674736,0.0],[-122.652337,45.568294,50.34170912,0.0],[-122.652367,45.568302,50.28439136,0.0],[-122.652398,45.568305,50.2685456,0.0],[-122.652466,45.568305,50.2935152,0.0],[-122.652573,45.568313,50.4824,0.0],[-122.652573,45.568359,50.14611728,0.0],[-122.652573,45.568378,50.05974176,0.0],[-122.652581,45.568397,49.99556528,0.0],[-122.652588,45.56842,49.9059584,0.0],[-122.652588,45.56842,49.9059584,0.0],[-122.652588,45.56842,49.9059584,0.0],[-122.652703,45.568511,49.62378032,0.0],[-122.652817,45.568611,48.85965648,0.0],[-122.653481,45.569137,47.36802512,0.0],[-122.653588,45.569229,48.1412,0.0],[-122.653779,45.569377,48.90394832,0.0],[-122.654145,45.569667,49.922,0.0],[-122.654381,45.569854,50.0,0.0],[-122.654824,45.570201,48.89872704,0.0],[-122.655068,45.570392,49.0,0.0],[-122.655221,45.570514,49.0,0.0],[-122.655488,45.570732,47.7296,0.0],[-122.655488,45.570732,47.7296,0.0],[-122.654107,45.571582,44.09,0.0],[-122.653985,45.571659,43.3736,0.0],[-122.65384,45.571758,42.824,0.0],[-122.65384,45.571758,42.824,0.0],[-122.653565,45.571765,41.892764,0.0],[-122.653092,45.571765,41.0464448,0.0],[-122.652649,45.571765,40.2994856,0.0],[-122.652451,45.571765,41.0503088,0.0],[-122.652268,45.571781,42.4064633599,0.0],[-122.652054,45.5718,42.56,0.0],[-122.651864,45.571823,42.022,0.0],[-122.651757,45.571838,41.4748,0.0],[-122.651658,45.571853,40.96705792,0.0],[-122.651558,45.571861,40.66616704,0.0],[-122.650147,45.571865,39.714,0.0],[-122.650055,45.571865,39.714,0.0],[-122.649979,45.571865,39.6384,0.0],[-122.648346,45.571865,38.5589584,0.0],[-122.646637,45.571865,34.0,0.0],[-122.646637,45.571865,34.0,0.0],[-122.648346,45.571865,38.5589584,0.0],[-122.649979,45.571865,39.6384,0.0],[-122.650055,45.571865,39.714,0.0],[-122.650147,45.571865,39.714,0.0],[-122.651558,45.571861,40.66616704,0.0],[-122.651658,45.571853,40.96705792,0.0],[-122.651757,45.571838,41.4748,0.0],[-122.651864,45.571823,42.022,0.0],[-122.652054,45.5718,42.56,0.0],[-122.652268,45.571781,42.4064633599,0.0],[-122.652451,45.571765,41.0503088,0.0],[-122.652649,45.571765,40.2994856,0.0],[-122.653092,45.571765,41.0464448,0.0],[-122.653565,45.571765,41.892764,0.0],[-122.65384,45.571758,42.824,0.0],[-122.65429,45.571769,43.9120304,0.0],[-122.654381,45.571769,44.11894256,0.0],[-122.654633,45.571769,45.19206992,0.0],[-122.654679,45.571769,45.41867696,0.0],[-122.655129,45.571769,47.096,0.0],[-122.655846,45.571773,43.9088,0.0],[-122.656174,45.571773,41.91333408,0.0],[-122.656281,45.571746,41.82532704,0.0],[-122.656518,45.571746,41.7144,0.0],[-122.656518,45.5718,41.52,0.0],[-122.656586,45.5718,41.52,0.0],[-122.656624,45.571777,41.6028,0.0],[-122.656678,45.571777,41.62739424,0.0],[-122.656975,45.571777,42.139292,0.0],[-122.657364,45.571777,41.80553088,0.0],[-122.657944,45.571781,44.1868,0.0],[-122.658341,45.571781,43.9724,0.0],[-122.659356,45.571784,43.86550784,0.0],[-122.659356,45.571784,43.86550784,0.0],[-122.659363,45.571052,49.6384,0.0],[-122.659363,45.570331,50.04884576,0.0],[-122.659363,45.569976,48.81853248,0.0],[-122.659363,45.569976,48.81853248,0.0],[-122.660378,45.569976,52.62,0.0],[-122.66124,45.56998,52.574592,0.0],[-122.661385,45.569984,53.0444064,0.0],[-122.661522,45.569988,53.02249856,0.0],[-122.662049,45.569988,52.01067904,0.0],[-122.662392,45.569988,51.37200384,0.0],[-122.662583,45.569988,51.32461632,0.0],[-122.663117,45.569984,53.54485888,0.0],[-122.663369,45.569984,55.186,0.0],[-122.663659,45.569984,56.22006976,0.0],[-122.664193,45.56998,59.0228,0.0],[-122.664338,45.56998,59.5448,0.0],[-122.664734,45.56998,58.7681472,0.0],[-122.665261,45.56998,53.9652,0.0],[-122.66568,45.569976,52.9523072,0.0],[-122.665803,45.569976,52.99056512,0.0],[-122.665909,45.569976,53.29593536,0.0],[-122.666337,45.569965,55.6499368,0.0],[-122.666558,45.569961,57.04664896,0.0],[-122.666657,45.569988,57.84700672,0.0],[-122.666779,45.569988,57.94854016,0.0],[-122.666878,45.569988,57.97933312,0.0],[-122.666977,45.569988,58.22427392,0.0],[-122.667092,45.569988,59.01650432,0.0],[-122.667199,45.569953,59.52269024,0.0],[-122.667412,45.569953,58.64199232,0.0],[-122.667946,45.56995,57.070992,0.0],[-122.668763,45.569946,56.55949792,0.0],[-122.668892,45.56995,56.1912,0.0],[-122.668892,45.56995,56.1912,0.0],[-122.668885,45.569862,56.5038448,0.0],[-122.66887,45.569217,56.932,0.0],[-122.668862,45.568992,57.532,0.0],[-122.668847,45.568122,60.44232864,0.0],[-122.668831,45.567733,57.12760592,0.0],[-122.668824,45.567237,57.98757248,0.0],[-122.668808,45.566535,58.8619712,0.0],[-122.668808,45.566444,58.76657408,0.0],[-122.668808,45.566345,58.9128096,0.0],[-122.668786,45.565158,61.7672,0.0],[-122.668755,45.563892,63.5068,0.0],[-122.66874,45.563041,62.536,0.0],[-122.668747,45.56287,62.5108,0.0],[-122.668747,45.562828,62.5108,0.0],[-122.668747,45.562778,62.5108,0.0],[-122.668732,45.562702,62.8376,0.0],[-122.668717,45.562641,63.1112,0.0],[-122.668557,45.561645,65.0,0.0],[-122.668465,45.56108,65.0,0.0],[-122.668442,45.560939,65.0,0.0],[-122.668427,45.560844,65.0,0.0],[-122.668404,45.560585,65.0,0.0],[-122.668396,45.56052,64.7728768,0.0],[-122.668335,45.559947,63.7680552,0.0],[-122.668328,45.559818,65.6208,0.0],[-122.66829,45.559455,69.074072,0.0],[-122.668267,45.559268,69.08711424,0.0],[-122.668259,45.559146,68.9256,0.0],[-122.668259,45.559089,68.7204,0.0],[-122.668259,45.559024,68.4864,0.0],[-122.668213,45.558284,68.40947264,0.0],[-122.668206,45.558231,68.42774912,0.0],[-122.668183,45.557891,67.11819312,0.0],[-122.668152,45.557556,64.7087999999,0.0],[-122.668107,45.557086,63.7956,0.0],[-122.668091,45.556907,65.142,0.0],[-122.668091,45.55685,65.5524,0.0],[-122.668053,45.5564,66.0308,0.0],[-122.66803,45.556037,62.1566912,0.0],[-122.667992,45.555515,59.854,0.0],[-122.667977,45.555198,58.91877984,0.0],[-122.667969,45.554637,59.51800112,0.0],[-122.667969,45.554615,59.6517224,0.0],[-122.667969,45.554615,59.6517224,0.0],[-122.667977,45.554569,59.94720752,0.0],[-122.667977,45.554508,60.32430464,0.0],[-122.667954,45.55331,59.3041792,0.0],[-122.667962,45.552116,57.6632,0.0],[-122.667962,45.552047,57.6632,0.0],[-122.667954,45.55199,57.6344,0.0],[-122.667946,45.551231,58.05395392,0.0],[-122.667946,45.55117,58.2271744,0.0],[-122.667939,45.550861,58.94219216,0.0],[-122.667939,45.550788,58.90527872,0.0],[-122.667931,45.549526,57.0356,0.0],[-122.667923,45.549087,53.20347808,0.0],[-122.667931,45.548786,52.34728736,0.0],[-122.667931,45.548713,52.20232688,0.0],[-122.667931,45.54832,52.5179232,0.0],[-122.667931,45.548259,52.83599184,0.0],[-122.667931,45.548198,53.15406048,0.0],[-122.667931,45.547565,54.5533256,0.0],[-122.667931,45.547504,54.45485696,0.0],[-122.667939,45.547134,53.7372,0.0],[-122.667939,45.546852,54.7524,0.0],[-122.667939,45.546798,54.9468,0.0],[-122.667939,45.546737,55.1664,0.0],[-122.667946,45.546672,55.3752,0.0],[-122.667946,45.546649,55.3944,0.0],[-122.667954,45.54607,56.2021088,0.0],[-122.667954,45.545833,57.3644,0.0],[-122.667954,45.54536,55.2149824,0.0],[-122.667962,45.544963,55.1332,0.0],[-122.667969,45.544887,55.4068,0.0],[-122.667992,45.54483,55.612,0.0],[-122.668,45.544799,55.7236,0.0],[-122.668023,45.544727,55.9828,0.0],[-122.668046,45.544666,56.20936256,0.0],[-122.668076,45.544586,56.4168,0.0],[-122.668107,45.544494,56.6364,0.0],[-122.668114,45.544429,56.72230176,0.0],[-122.668122,45.543807,54.19914848,0.0],[-122.668122,45.543735,54.1259504,0.0],[-122.668122,45.543663,54.05275232,0.0],[-122.668129,45.543304,55.0,0.0],[-122.668129,45.542896,55.42252864,0.0],[-122.668129,45.542892,55.43312128,0.0],[-122.668129,45.542823,55.61584432,0.0],[-122.668122,45.541904,51.91317248,0.0],[-122.668114,45.541515,48.362,0.0],[-122.668107,45.54137,46.9194064,0.0],[-122.668107,45.541297,46.60793584,0.0],[-122.668099,45.541252,46.43012608,0.0],[-122.668076,45.54121,46.3086016,0.0],[-122.668046,45.541152,46.17653632,0.0],[-122.667977,45.541065,46.5678552,0.0],[-122.667908,45.540988,47.18217216,0.0],[-122.667847,45.540904,47.68220352,0.0],[-122.667809,45.540847,47.94526992,0.0],[-122.667779,45.540802,48.22510368,0.0],[-122.66774,45.540721,48.8898016,0.0],[-122.667717,45.540645,49.4264536,0.0],[-122.667702,45.540561,49.96614688,0.0],[-122.667695,45.540462,50.1003664,0.0],[-122.667695,45.539588,50.3316,0.0],[-122.667702,45.538677,46.40969184,0.0],[-122.667702,45.538051,45.2728,0.0],[-122.66771,45.537464,42.2288,0.0],[-122.667725,45.536968,40.38,0.0],[-122.667725,45.536365,39.03434,0.0],[-122.667725,45.535617,38.19,0.0],[-122.667717,45.535503,38.26019696,0.0],[-122.667717,45.535202,38.9832,0.0],[-122.667756,45.535114,39.336,0.0],[-122.667756,45.535095,39.4728,0.0],[-122.66774,45.535018,40.1424,0.0],[-122.66774,45.534454,36.2345216,0.0],[-122.667748,45.534416,36.19862272,0.0],[-122.667748,45.534374,36.33361408,0.0],[-122.667763,45.534271,36.64438192,0.0],[-122.667763,45.534133,37.24884784,0.0],[-122.667756,45.533992,38.30689792,0.0],[-122.667756,45.533958,38.56129408,0.0],[-122.66774,45.53392,38.896768,0.0],[-122.66774,45.53392,38.896768,0.0],[-122.66771,45.533874,39.1224352,0.0],[-122.66758,45.533756,39.2986624,0.0],[-122.667687,45.533702,37.96801312,0.0],[-122.667717,45.533679,37.44797584,0.0],[-122.667733,45.53366,37.0876864,0.0],[-122.667748,45.533634,36.64950016,0.0],[-122.667748,45.533607,36.3696,0.0],[-122.667756,45.533153,31.61350272,0.0],[-122.667756,45.533153,31.61350272,0.0],[-122.667756,45.53313,31.5242112,0.0],[-122.667756,45.533061,31.25633664,0.0],[-122.667763,45.532989,31.3992000001,0.0],[-122.667763,45.532974,31.4532000001,0.0],[-122.667763,45.532936,31.5900000001,0.0],[-122.667763,45.532409,33.37988496,0.0],[-122.66787,45.532409,32.7780736,0.0],[-122.66787,45.532409,32.7780736,0.0],[-122.667763,45.532409,33.37988496,0.0],[-122.667649,45.532409,33.78322608,0.0],[-122.667595,45.532405,34.017108,0.0],[-122.667565,45.532382,34.4009904,0.0],[-122.667496,45.532321,35.61152064,0.0],[-122.667374,45.532192,38.53980672,0.0],[-122.667428,45.532161,38.62851072,0.0],[-122.667428,45.532161,38.62851072,0.0],[-122.667649,45.532035,37.3637328,0.0],[-122.667809,45.532012,34.9212070399,0.0],[-122.667786,45.531997,35.4608009599,0.0],[-122.667779,45.53197,35.7908144001,0.0],[-122.667779,45.531944,35.9688070401,0.0],[-122.667786,45.531925,35.6144719999,0.0],[-122.667801,45.531906,35.0947702401,0.0],[-122.667779,45.531883,35.3109732801,0.0],[-122.667771,45.531867,35.3128108799,0.0],[-122.667771,45.531597,31.9411219199,0.0],[-122.667771,45.530838,29.00841984,0.0],[-122.667771,45.530838,29.00841984,0.0],[-122.667771,45.530788,28.5348,0.0],[-122.66726,45.530788,31.3794048,0.0],[-122.667084,45.530784,31.82154752,0.0],[-122.66642,45.530784,31.6050176,0.0],[-122.666375,45.530807,31.4654399999,0.0],[-122.666329,45.530826,31.91883264,0.0],[-122.666268,45.530845,32.6439648,0.0],[-122.666207,45.530868,33.24924288,0.0],[-122.666146,45.530883,33.84977184,0.0],[-122.666062,45.530895,34.3280496,0.0],[-122.665909,45.530902,34.91866272,0.0],[-122.665787,45.530902,34.5893318399,0.0],[-122.665688,45.530902,33.1597401601,0.0],[-122.665688,45.530902,33.1597401601,0.0],[-122.665673,45.530796,32.54032704,0.0],[-122.665658,45.530727,31.2720700799,0.0],[-122.665658,45.530704,30.9320601599,0.0],[-122.665726,45.530704,31.8141235201,0.0],[-122.665726,45.530689,31.5527203201,0.0],[-122.665734,45.530254,28.20181056,0.0],[-122.665734,45.530204,28.62617856,0.0],[-122.665734,45.530162,28.98264768,0.0],[-122.665734,45.53009,29.5937376,0.0],[-122.665734,45.530017,30.21331488,0.0],[-122.665734,45.529968,30.54680448,0.0],[-122.665734,45.52988,31.0671168,0.0],[-122.665726,45.529792,31.59466368,0.0],[-122.665741,45.529666,31.39223328,0.0],[-122.665764,45.529571,30.23004672,0.0],[-122.665803,45.529518,29.3000515201,0.0],[-122.665841,45.529483,28.49233824,0.0],[-122.665894,45.529434,27.5632,0.0],[-122.665955,45.529472,27.4339008,0.0],[-122.665955,45.529472,27.4339008,0.0],[-122.665894,45.529434,27.5632,0.0],[-122.665864,45.529388,27.7792,0.0],[-122.665841,45.529312,27.9448,0.0],[-122.665818,45.529239,28.08394816,0.0],[-122.665795,45.529193,28.1641648,0.0],[-122.66578,45.529148,28.2592,0.0],[-122.665764,45.529087,28.5364,0.0],[-122.665757,45.528991,28.9072,0.0],[-122.665757,45.528739,28.58691792,0.0],[-122.665757,45.52872,28.4997216,0.0],[-122.665757,45.528659,28.21977552,0.0],[-122.665856,45.528659,27.8459999999,0.0],[-122.665864,45.528579,27.22436224,0.0],[-122.66594,45.528514,25.5494463999,0.0],[-122.665955,45.528503,25.2508696,0.0],[-122.665963,45.528495,25.0739223999,0.0],[-122.66597,45.528491,24.9475408,0.0],[-122.665947,45.528472,25.06572736,0.0],[-122.665917,45.528453,25.2590430401,0.0],[-122.665902,45.528427,25.18664416,0.0],[-122.665886,45.528396,25.06522624,0.0],[-122.665886,45.528373,24.83252512,0.0],[-122.665886,45.528354,24.64029376,0.0],[-122.665925,45.528335,24.02602,0.0],[-122.66594,45.528316,23.6513151999,0.0],[-122.665963,45.528297,23.15482768,0.0],[-122.665986,45.528282,22.6769017599,0.0],[-122.666024,45.528274,22.0737548801,0.0],[-122.666054,45.528266,21.55431232,0.0],[-122.666092,45.52827,21.1134591999,0.0],[-122.666131,45.528274,20.6198812802,0.0],[-122.666131,45.528274,20.6198812802,0.0],[-122.666062,45.528186,20.15972416,0.0],[-122.666024,45.528141,20.1302099201,0.0],[-122.666016,45.528118,19.94748544,0.0],[-122.666123,45.528095,17.6061672,0.0],[-122.666153,45.528087,17.21318832,0.0],[-122.666298,45.52806,15.7021056001,0.0],[-122.66681,45.527957,13.6452,0.0],[-122.666825,45.527954,13.6344,0.0],[-122.666848,45.527938,13.5768,0.0],[-122.666848,45.527938,13.5768,0.0],[-122.666657,45.527843,13.2696,0.0],[-122.666359,45.52766,14.6719104,0.0],[-122.66623,45.527565,15.301392,0.0],[-122.666108,45.527465,14.5267776,0.0],[-122.665993,45.527359,13.8135369599,0.0],[-122.665932,45.527305,13.2211008,0.0],[-122.665902,45.527275,12.798864,0.0],[-122.66597,45.527236,11.7567936,0.0],[-122.666024,45.527275,12.1927680001,0.0],[-122.666085,45.52724,11.362032,0.0],[-122.665772,45.527011,9.78869631997,0.0],[-122.665688,45.526943,10.06704128,0.0],[-122.66565,45.526893,9.77326400003,0.0],[-122.665619,45.52684,9.41064319989,0.0],[-122.665589,45.52676,8.7025088001,0.0],[-122.665558,45.52666,7.8756223999,0.0],[-122.665535,45.526565,7.29908399987,0.0],[-122.665528,45.526466,6.4004620801,0.0],[-122.665535,45.526233,5.92214239991,0.0],[-122.665551,45.526084,6.1583980801,0.0],[-122.665574,45.52597,6.44372479997,0.0],[-122.665574,45.525966,6.46194943999,0.0],[-122.665658,45.525608,8.17999999998,0.0],[-122.665803,45.525142,12.01750784,0.0],[-122.665833,45.525058,11.41899776,0.0],[-122.665902,45.524806,8.13184447997,0.0],[-122.665902,45.524806,8.13184447997,0.0],[-122.665947,45.524814,8.18640031999,0.0],[-122.666184,45.524848,8.76438527999,0.0],[-122.666192,45.524848,8.80894463996,0.0],[-122.666222,45.524852,9.01349376005,0.0],[-122.666214,45.524898,9.40481087999,0.0],[-122.666214,45.524898,9.40481087999,0.0],[-122.666222,45.524852,9.01349376005,0.0],[-122.666192,45.524848,8.80894463996,0.0],[-122.666184,45.524848,8.76438527999,0.0],[-122.665947,45.524814,8.18640031999,0.0],[-122.665902,45.524806,8.13184447997,0.0],[-122.665993,45.524459,4.1572,0.0],[-122.66607,45.524166,2.85235520002,0.0],[-122.666108,45.523994,2.99576191999,0.0],[-122.666146,45.523818,3.41024063999,0.0],[-122.666192,45.523513,2.69384448005,0.0],[-122.666222,45.523265,-0.187987200033,0.0],[-122.66623,45.523143,-1.27973760001,0.0],[-122.66623,45.523143,-1.27973760001,0.0],[-122.666237,45.523097,-1.67366975999,0.0],[-122.666245,45.523017,-1.65549840002,0.0],[-122.666253,45.52275,0.708639999978,0.0],[-122.666253,45.522747,0.730006719975,0.0],[-122.666245,45.52243,2.89146399999,0.0],[-122.666237,45.522102,4.43280000001,0.0],[-122.66623,45.521877,4.86111840001,0.0],[-122.666222,45.521663,4.41500832003,0.0],[-122.666222,45.521617,4.61333088003,0.0],[-122.666092,45.521598,4.13759999996,0.0],[-122.666131,45.521457,4.23373103992,0.0],[-122.666176,45.521293,5.46352255992,0.0],[-122.666283,45.521015,8.53939040005,0.0],[-122.666344,45.520835,10.9800608,0.0],[-122.666413,45.520679,9.88502607987,0.0],[-122.666451,45.52058,8.72672320012,0.0],[-122.666482,45.520492,7.68458751995,0.0],[-122.66652,45.520347,6.37515519991,0.0],[-122.666558,45.520175,6.46582400003,0.0],[-122.666794,45.519104,6.95236992009,0.0],[-122.666817,45.519008,6.81813312012,0.0],[-122.666901,45.518737,9.33184384,0.0],[-122.667237,45.517841,4.0,0.0],[-122.667313,45.517601,4.0,0.0],[-122.667313,45.517601,4.0,0.0],[-122.667328,45.517559,4.0,0.0],[-122.667504,45.516906,4.81844224004,0.0],[-122.667588,45.516578,8.31727744011,0.0],[-122.667931,45.515129,6.48216304008,0.0],[-122.668023,45.514644,5.20139647997,0.0],[-122.668068,45.514396,5.304,0.0],[-122.668122,45.513862,8.12342720001,0.0],[-122.668137,45.513679,7.1854904,0.0],[-122.668145,45.513435,5.85229600005,0.0],[-122.668137,45.513191,5.05143567999,0.0],[-122.668129,45.512996,5.68187584004,0.0],[-122.668129,45.512996,5.68187584004,0.0],[-122.668099,45.51284,8.77140160009,0.0],[-122.668091,45.512794,9.80111103991,0.0],[-122.668061,45.512584,6.07531071996,0.0],[-122.668015,45.512416,5.80969920014,0.0],[-122.667962,45.512218,7.70479999989,0.0],[-122.667946,45.51213,8.33839999998,0.0],[-122.66784,45.511959,12.5360000001,0.0],[-122.667786,45.51176,14.0300543998,0.0],[-122.667771,45.511634,13.19267776,0.0],[-122.667756,45.511592,12.3258956801,0.0],[-122.66774,45.511539,11.2532224001,0.0],[-122.667702,45.511447,9.90052095976,0.0],[-122.667618,45.511299,10.1573305599,0.0],[-122.667565,45.511173,10.1489296001,0.0],[-122.667504,45.510986,7.79180032015,0.0],[-122.667504,45.510986,7.79180032015,0.0],[-122.667458,45.510833,5.2094185601,0.0],[-122.667428,45.510662,5.91372543998,0.0],[-122.667359,45.510433,7.77715311988,0.0],[-122.667283,45.510238,10.3614678401,0.0],[-122.667252,45.510169,11.4920204799,0.0],[-122.667176,45.509975,12.362976,0.0],[-122.667084,45.509738,12.8677363201,0.0],[-122.667031,45.509628,12.48478976,0.0],[-122.666909,45.509414,16.91033984,0.0],[-122.666863,45.509357,17.09759744,0.0],[-122.666825,45.509296,17.593568,0.0],[-122.666771,45.509181,19.06832384,0.0],[-122.666771,45.509166,19.24460864,0.0],[-122.666771,45.509151,19.15030304,0.0],[-122.666794,45.509098,18.77429888,0.0],[-122.666802,45.509056,18.59660288,0.0],[-122.666832,45.508903,18.40258304,0.0],[-122.666825,45.508796,14.9426879999,0.0],[-122.666802,45.508708,12.2046950399,0.0],[-122.666771,45.508628,10.6853107201,0.0],[-122.666718,45.508518,11.6054899199,0.0],[-122.666634,45.508411,12.69575712,0.0],[-122.666527,45.508312,12.81381504,0.0],[-122.666482,45.508281,12.88964832,0.0],[-122.666436,45.508262,13.10364672,0.0],[-122.666428,45.508243,13.02221184,0.0],[-122.666413,45.508232,13.0651353599,0.0],[-122.66639,45.50822,13.174368,0.0],[-122.666375,45.508174,12.9028,0.0],[-122.66626,45.507961,11.2603456,0.0],[-122.666047,45.507659,8.61909007992,0.0],[-122.665925,45.507522,7.60373600001,0.0],[-122.665803,45.507408,7.04256703998,0.0],[-122.665726,45.507385,6.91796959998,0.0],[-122.66565,45.507358,6.80379200003,0.0],[-122.665505,45.507297,6.75541680002,0.0],[-122.665329,45.507179,7.22178528001,0.0],[-122.665154,45.507041,7.53449056,0.0],[-122.665101,45.506996,7.58411583993,0.0],[-122.66504,45.506912,7.26805759995,0.0],[-122.665009,45.506835,6.75909680004,0.0],[-122.664994,45.506771,6.17273888006,0.0],[-122.664971,45.506706,5.57354912004,0.0],[-122.664956,45.506652,5.17512703998,0.0],[-122.664902,45.506576,5.58310784001,0.0],[-122.664902,45.506576,5.58310784001,0.0],[-122.664864,45.506526,5.98546688004,0.0],[-122.664834,45.506488,6.36635264002,0.0],[-122.66465,45.506328,9.01539200002,0.0],[-122.66462,45.506294,9.54490880003,0.0],[-122.664589,45.506248,10.2168531199,0.0],[-122.664567,45.506198,10.87600736,0.0],[-122.664544,45.506145,11.6025248,0.0],[-122.664521,45.50608,12.4280672001,0.0],[-122.664513,45.506034,12.88331168,0.0],[-122.66449,45.505916,14.0279936,0.0],[-122.664185,45.505916,15.3388,0.0],[-122.664055,45.505893,15.2547496,0.0],[-122.664055,45.505893,15.2547496,0.0],[-122.66343,45.505889,15.0,0.0],[-122.663056,45.505889,15.9984,0.0],[-122.66301,45.505889,16.164,0.0],[-122.661942,45.505889,13.1860905599,0.0],[-122.66182,45.505889,12.5717376,0.0],[-122.661667,45.505886,11.81211744,0.0],[-122.661309,45.505878,13.72464608,0.0],[-122.661202,45.505878,13.78658624,0.0],[-122.661133,45.505878,13.82652896,0.0],[-122.660965,45.505874,14.8285936,0.0],[-122.66079,45.50587,15.736,0.0],[-122.660752,45.505867,15.7576,0.0],[-122.660706,45.505855,15.844,0.0],[-122.660637,45.505821,15.94258192,0.0],[-122.660637,45.505821,15.94258192,0.0],[-122.659188,45.505817,15.9052,0.0],[-122.659157,45.505817,16.0588,0.0],[-122.659134,45.505809,16.0876,0.0],[-122.659066,45.505794,16.1416,0.0],[-122.659066,45.505794,16.1416,0.0],[-122.65902,45.505809,16.0876,0.0],[-122.658997,45.505813,16.0732,0.0],[-122.658967,45.505813,16.0732,0.0],[-122.658928,45.505809,16.0876,0.0],[-122.658906,45.505802,16.1128,0.0],[-122.658883,45.505783,16.17735856,0.0],[-122.658867,45.505764,16.22993152,0.0],[-122.65886,45.505741,16.2978304,0.0],[-122.65886,45.505725,16.34944,0.0],[-122.658867,45.505641,16.63783888,0.0],[-122.658715,45.505641,16.2589576,0.0],[-122.658646,45.505641,16.08696544,0.0],[-122.658524,45.505641,15.78286336,0.0],[-122.658471,45.505641,15.65075344,0.0],[-122.65844,45.505638,15.5668288,0.0],[-122.657937,45.505367,11.9636,0.0],[-122.657883,45.505325,11.51,0.0],[-122.657883,45.505325,11.51,0.0],[-122.657883,45.505096,10.3456,0.0],[-122.657883,45.505073,10.2628,0.0],[-122.657898,45.50505,10.18,0.0],[-122.657822,45.505031,10.1116,0.0],[-122.657685,45.504997,10.3556,0.0],[-122.657547,45.504966,11.0756,0.0],[-122.657456,45.504959,11.56524032,0.0],[-122.657349,45.504947,12.26136224,0.0],[-122.657242,45.504932,12.89245952,0.0],[-122.657158,45.504909,13.15545888,0.0],[-122.657074,45.504882,13.30692672,0.0],[-122.657029,45.504859,13.34251344,0.0],[-122.656952,45.504817,13.33191936,0.0],[-122.656868,45.504768,13.1648,0.0],[-122.656716,45.504673,12.8228,0.0],[-122.656609,45.504615,12.614,0.0],[-122.656609,45.504615,12.614,0.0],[-122.65654,45.504581,12.4916,0.0],[-122.655793,45.504165,14.1383288,0.0],[-122.655015,45.503715,10.748,0.0],[-122.654946,45.503677,10.8170883201,0.0],[-122.654793,45.503585,11.6083512,0.0],[-122.65474,45.503543,12.1328928,0.0],[-122.654549,45.503437,14.10672752,0.0],[-122.654519,45.503379,14.41907504,0.0],[-122.654519,45.503379,14.41907504,0.0],[-122.654549,45.503437,14.10672752,0.0],[-122.654603,45.503547,13.4193406401,0.0],[-122.654641,45.503616,12.88965376,0.0],[-122.654671,45.503684,12.7672134401,0.0],[-122.654694,45.503757,12.7766396799,0.0],[-122.654717,45.503822,12.80132704,0.0],[-122.65474,45.503883,12.9134432,0.0],[-122.654763,45.503974,13.7724,0.0],[-122.654763,45.504047,14.5608,0.0],[-122.654763,45.504077,14.8848,0.0],[-122.654763,45.504211,16.19582928,0.0],[-122.654755,45.504795,19.231084,0.0],[-122.654755,45.504859,19.4342968,0.0],[-122.654755,45.504859,19.4342968,0.0],[-122.654664,45.504859,19.59560704,0.0],[-122.653992,45.504856,18.98633984,0.0],[-122.653832,45.504856,19.09863168,0.0],[-122.653733,45.504852,19.26219264,0.0],[-122.653733,45.504852,19.26219264,0.0],[-122.653725,45.504959,19.502916,0.0],[-122.653725,45.50505,19.9176,0.0],[-122.653725,45.50505,19.9176,0.0],[-122.653641,45.50505,20.111136,0.0],[-122.653618,45.505054,20.17924224,0.0],[-122.653588,45.505062,20.2232,0.0],[-122.653473,45.505104,20.3744,0.0],[-122.653428,45.505123,20.4428,0.0],[-122.653389,45.505149,20.5364,0.0],[-122.653283,45.505233,20.68680944,0.0],[-122.652504,45.505901,18.74550784,0.0],[-122.65181,45.506496,22.0984,0.0],[-122.651459,45.506797,22.2784,0.0],[-122.651406,45.506843,22.3036,0.0],[-122.649888,45.508155,20.7411456,0.0],[-122.649781,45.508251,20.76631824,0.0],[-122.649781,45.508251,20.76631824,0.0],[-122.649811,45.508274,20.85466656,0.0],[-122.649888,45.508342,21.01862016,0.0],[-122.649941,45.508419,21.24289584,0.0],[-122.649964,45.508483,21.46897152,0.0],[-122.649972,45.508533,21.64634496,0.0],[-122.649956,45.508636,22.00660736,0.0],[-122.649918,45.508701,22.25647328,0.0],[-122.649895,45.508739,22.3687688,0.0],[-122.649888,45.508789,22.61939072,0.0],[-122.649895,45.508831,22.9059752,0.0],[-122.649895,45.508865,23.104508,0.0],[-122.649849,45.508876,22.84522304,0.0],[-122.649788,45.508911,22.4736,0.0],[-122.649773,45.508941,22.3656,0.0],[-122.649704,45.508926,21.9344,0.0],[-122.649575,45.508911,21.47,0.0],[-122.649521,45.508918,21.2756,0.0],[-122.64946,45.508926,21.056,0.0],[-122.649415,45.508926,21.0,0.0],[-122.649308,45.508918,21.0,0.0],[-122.649209,45.508895,21.0,0.0],[-122.649125,45.508861,21.1996,0.0],[-122.649079,45.508838,21.448,0.0],[-122.649033,45.508872,21.9016,0.0],[-122.649033,45.508872,21.9016,0.0],[-122.648957,45.508937,22.37886864,0.0],[-122.647416,45.510223,25.7108,0.0],[-122.645691,45.511699,32.5124,0.0],[-122.645432,45.511928,32.97366784,0.0],[-122.645386,45.511966,32.93953408,0.0],[-122.645348,45.512027,32.84973568,0.0],[-122.645302,45.512134,32.88098944,0.0],[-122.645302,45.512134,32.88098944,0.0],[-122.64544,45.512165,32.072608,0.0],[-122.645508,45.512176,31.61822464,0.0],[-122.645569,45.512184,31.26854016,0.0],[-122.645569,45.512184,31.26854016,0.0],[-122.645569,45.512271,30.99150096,0.0],[-122.645569,45.512905,33.4002328,0.0],[-122.645554,45.513614,36.00554176,0.0],[-122.645554,45.514049,36.0,0.0],[-122.645554,45.514328,36.5808,0.0],[-122.645554,45.514328,36.5808,0.0],[-122.644539,45.514324,38.85240256,0.0],[-122.643525,45.51432,42.138,0.0],[-122.64251,45.514316,41.0,0.0],[-122.640168,45.514308,52.18347776,0.0],[-122.639153,45.514305,52.5265016,0.0],[-122.638215,45.514301,54.6896136,0.0],[-122.638207,45.514286,54.62498208,0.0],[-122.638207,45.514282,54.60403296,0.0],[-122.638199,45.51427,54.5518992,0.0],[-122.638184,45.514259,54.51109824,0.0],[-122.638176,45.514259,54.52067136,0.0],[-122.638161,45.514251,54.49195344,0.0],[-122.638138,45.514251,54.51709152,0.0],[-122.638123,45.514251,54.53348592,0.0],[-122.638108,45.514255,54.5759616,0.0],[-122.6381,45.514259,54.611616,0.0],[-122.638085,45.51427,54.704568,0.0],[-122.638077,45.514278,54.77065824,0.0],[-122.63807,45.514286,54.8368608,0.0],[-122.63807,45.514297,54.9140016,0.0],[-122.637116,45.514297,53.444,0.0],[-122.636101,45.514297,53.54787888,0.0],[-122.634873,45.514293,52.20553456,0.0],[-122.634781,45.514308,52.12153792,0.0],[-122.634675,45.514324,52.3028,0.0],[-122.633706,45.514324,51.1168,0.0],[-122.632615,45.51432,47.966,0.0],[-122.632348,45.51432,46.7027456,0.0],[-122.631707,45.51432,45.9349504,0.0],[-122.630951,45.514316,46.0,0.0],[-122.629578,45.514312,50.0,0.0],[-122.629494,45.514312,50.0,0.0],[-122.62822,45.514312,51.8329344,0.0],[-122.626854,45.514312,51.89115392,0.0],[-122.625886,45.514305,50.494,0.0],[-122.624512,45.514305,53.498,0.0],[-122.623322,45.514301,54.9592,0.0],[-122.622918,45.514301,54.23947872,0.0],[-122.622696,45.514301,54.4836,0.0],[-122.622699738,45.5143015392,54.4855411691,0.0],[-122.622721195,45.5142865032,54.431411344,0.0],[-122.622336174,45.5142865045,54.1769781883,0.0],[-122.621951153,45.5142865045,54.5548527914,0.0],[-122.621566131,45.5142865032,54.7247279249,0.0],[-122.621537,45.514297,54.74982256,0.0],[-122.620186,45.514301,55.814,0.0],[-122.618073,45.514289,54.0,0.0],[-122.617096,45.514286,55.4296,0.0],[-122.616166,45.514286,56.0,0.0],[-122.615731,45.514289,56.0,0.0],[-122.615601,45.514266,56.0,0.0],[-122.615136,45.514266,57.5104,0.0]]]}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-122.61513590812683,45.51463984955846]},"properties":{"id":"946a660f-ff2c-43ce-a34e-1e5354a2b6e3","updated_date":"2018-05-19T06:11:53Z","time_created":"2018-05-19T06:11:53Z","deleted":false,"title":"untitled","public":false,"is_active":true,"icon":"","revision":15,"notes":"","latitude":45.51463984955846,"longitude":-122.61513590812683,"elevation":57,"attr":"route","track_id":"74428dc4-1018-4194-8696-82e6002378a9","photos":[]}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-122.61512517929076,45.51426394904976]},"properties":{"id":"6bbb8411-ea9e-4bb3-9ddf-8ebb30f200ee","updated_date":"2018-05-19T06:11:53Z","time_created":"2018-05-19T06:11:53Z","deleted":false,"title":"untitled","public":false,"is_active":true,"icon":"","revision":15,"notes":"","latitude":45.51426394904976,"longitude":-122.61512517929076,"elevation":57,"attr":"route","track_id":"74428dc4-1018-4194-8696-82e6002378a9","photos":[]}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-122.61410593986511,45.514654885526575]},"properties":{"id":"33a54ddf-abe0-4fd7-ab89-3569f4d0e26c","updated_date":"2018-05-19T06:11:53Z","time_created":"2018-05-19T06:11:53Z","deleted":false,"title":"untitled","public":false,"is_active":true,"icon":"","revision":15,"notes":"","latitude":45.514654885526575,"longitude":-122.61410593986511,"elevation":59,"attr":"route","track_id":"74428dc4-1018-4194-8696-82e6002378a9","photos":[]}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-122.62233495712279,45.5142263588608]},"properties":{"id":"387dd475-c119-48dd-83b4-c83ad7c7d6c3","updated_date":"2018-05-19T06:11:53Z","time_created":"2018-05-19T06:11:53Z","deleted":false,"title":"45.51423, -122.62233","public":false,"is_active":true,"icon":"blue-pin-down.png","revision":15,"notes":"","latitude":45.5142263588608,"longitude":-122.62233495712279,"elevation":54,"attr":"","track_id":"74428dc4-1018-4194-8696-82e6002378a9","photos":[]}}]}},
+          "data": {
+    "type": "FeatureCollection",
+    "features": [
+        { "type": "Feature",
+          "properties": {
+            "id": "5eec904b-2ac8-4072-ad4c-196696b019b9",
+            "updated_date": "2018-11-26T05:06:28Z",
+            "time_created": "2018-11-26T04:59:31Z",
+            "last_updated_on_server": "2018-11-26T05:06:28.065",
+            "db_insert_date": "2018-11-26T04:59:31Z",
+            "deleted": false,
+            "title": "Little South Fork Kilchis River (unfinished OaB)",
+            "public": false,
+            "color": "#800080",
+            "hexcolor": "#800080",
+            "is_active": true,
+            "revision": 25,
+            "notes": "",
+            "track_type": "route",
+            "routing_mode": "pedestrian",
+            "uploaded_gpx_to_osm": null,
+            "flag": null,
+            "source": null,
+            "cover_photo_id": null,
+            "distance": 7243.37381550504,
+            "total_ascent": 618.563711519861,
+            "total_descent": 257.769800319868,
+            "stopped_time": 0,
+            "total_time": 0,
+            "average_speed": 0,
+            "moving_time": 0,
+            "moving_speed": 0,
+            "preferred_link": "/datasummary/track/5eec904b-2ac8-4072-ad4c-196696b019b9/",
+            "user_displayname": "taylor.morris",
+            "username": "taylor.morris@gmail.com",
+            "user_email": "taylor.morris@gmail.com",
+            "user_id": 515547,
+            "favorite_count": 0,
+            "comment_count": 0,
+            "user_photo_count": 0,
+            "latitude": 45.562808792898586,
+            "longitude": -123.73414549322726
+          },
+          "style": {
+            "stroke": "#800080"
+          },
+          "geometry": {
+            "type": "MultiLineString",
+            "coordinates": [
+              [
+                [
+                  -123.751923,
+                  45.548515,
+                  88.62728880001357,
+                  0
+                ],
+                [
+                  -123.752007,
+                  45.549228,
+                  92.66680000001747,
+                  0
+                ],
+                [
+                  -123.752175,
+                  45.549732,
+                  96.96480000000429,
+                  0
+                ],
+                [
+                  -123.752755,
+                  45.550556,
+                  97.16439360004786,
+                  0
+                ],
+                [
+                  -123.752656,
+                  45.551792,
+                  103.83158783993873,
+                  0
+                ],
+                [
+                  -123.752854,
+                  45.552318,
+                  107.98597376000157,
+                  0
+                ],
+                [
+                  -123.753701,
+                  45.553642,
+                  103.40878431998681,
+                  0
+                ],
+                [
+                  -123.75396,
+                  45.554397,
+                  110.25190080000743,
+                  0
+                ],
+                [
+                  -123.75396,
+                  45.555198,
+                  114.23447679991664,
+                  0
+                ],
+                [
+                  -123.754181,
+                  45.555839,
+                  118.95920000000842,
+                  0
+                ],
+                [
+                  -123.75454,
+                  45.556388,
+                  120.98830079997806,
+                  0
+                ],
+                [
+                  -123.75454,
+                  45.55643,
+                  121.68908799997851,
+                  0
+                ],
+                [
+                  -123.75454,
+                  45.55643,
+                  121.68908799997851,
+                  0
+                ],
+                [
+                  -123.754509,
+                  45.556911,
+                  130.37001903999092,
+                  0
+                ],
+                [
+                  -123.753792,
+                  45.557323,
+                  137.79654463988078,
+                  0
+                ],
+                [
+                  -123.752945,
+                  45.55746,
+                  135.88862399988867,
+                  0
+                ],
+                [
+                  -123.752099,
+                  45.557964,
+                  141.19484223995752,
+                  0
+                ],
+                [
+                  -123.751236,
+                  45.558315,
+                  143.50447360018637,
+                  0
+                ],
+                [
+                  -123.749848,
+                  45.558624,
+                  146.10400000007826,
+                  0
+                ],
+                [
+                  -123.748482,
+                  45.558765,
+                  141.445804800024,
+                  0
+                ],
+                [
+                  -123.745621,
+                  45.559909,
+                  145.86045231994393,
+                  0
+                ],
+                [
+                  -123.745492,
+                  45.560089,
+                  150.90370752003685,
+                  0
+                ],
+                [
+                  -123.74556,
+                  45.560569,
+                  155.4032256000797,
+                  0
+                ],
+                [
+                  -123.74614,
+                  45.561416,
+                  169.07200000006742,
+                  0
+                ],
+                [
+                  -123.746178,
+                  45.561828,
+                  177.24225663995296,
+                  0
+                ],
+                [
+                  -123.746392,
+                  45.562129,
+                  185.9579174399461,
+                  0
+                ],
+                [
+                  -123.746392,
+                  45.562129,
+                  185.9579174399461,
+                  0
+                ],
+                [
+                  -123.746026,
+                  45.562164,
+                  192.69382144010183,
+                  0
+                ],
+                [
+                  -123.745476,
+                  45.562164,
+                  210.5504000002411,
+                  0
+                ],
+                [
+                  -123.744416,
+                  45.561183,
+                  224.42810111994174,
+                  0
+                ],
+                [
+                  -123.743905,
+                  45.560527,
+                  224.313049600086,
+                  0
+                ],
+                [
+                  -123.743538,
+                  45.56018,
+                  222.15196800012004,
+                  0
+                ],
+                [
+                  -123.742119,
+                  45.559997,
+                  229.3028531202293,
+                  0
+                ],
+                [
+                  -123.742119,
+                  45.559997,
+                  229.3028531202293,
+                  0
+                ],
+                [
+                  -123.742119,
+                  45.559997,
+                  229.3028531202293,
+                  0
+                ],
+                [
+                  -123.741517,
+                  45.560245,
+                  234.2628000001671,
+                  0
+                ],
+                [
+                  -123.741051,
+                  45.560661,
+                  239.39589088011252,
+                  0
+                ],
+                [
+                  -123.740754,
+                  45.561145,
+                  257.87728640006145,
+                  0
+                ],
+                [
+                  -123.739098,
+                  45.561981,
+                  243.31760000000895,
+                  0
+                ],
+                [
+                  -123.738961,
+                  45.562389,
+                  245.24133616014262,
+                  0
+                ],
+                [
+                  -123.739228,
+                  45.562847,
+                  258.6190700798455,
+                  0
+                ],
+                [
+                  -123.73909,
+                  45.56377,
+                  277.61412799998413,
+                  0
+                ],
+                [
+                  -123.738717,
+                  45.564132,
+                  289.26479999998946,
+                  0
+                ],
+                [
+                  -123.738686,
+                  45.564125,
+                  288.73919999988266,
+                  0
+                ],
+                [
+                  -123.738686,
+                  45.564125,
+                  288.73919999988266,
+                  0
+                ],
+                [
+                  -123.738472,
+                  45.56406,
+                  286.7020927998855,
+                  0
+                ],
+                [
+                  -123.737137,
+                  45.563232,
+                  265.46256191995485,
+                  0
+                ],
+                [
+                  -123.73671,
+                  45.563159,
+                  258.6407775999797,
+                  0
+                ],
+                [
+                  -123.736527,
+                  45.563304,
+                  261.4305913599993,
+                  0
+                ],
+                [
+                  -123.7361,
+                  45.563385,
+                  258.4414399997525,
+                  0
+                ],
+                [
+                  -123.735817,
+                  45.563724,
+                  263.280696319921,
+                  0
+                ],
+                [
+                  -123.735413,
+                  45.564735,
+                  285.65922879981156,
+                  0
+                ],
+                [
+                  -123.735398,
+                  45.564739,
+                  285.5794355202486,
+                  0
+                ],
+                [
+                  -123.735398,
+                  45.564739,
+                  285.5794355202486,
+                  0
+                ],
+                [
+                  -123.734841,
+                  45.56483,
+                  289.61449120001936,
+                  0
+                ],
+                [
+                  -123.734101,
+                  45.564613,
+                  279.0554099199981,
+                  0
+                ],
+                [
+                  -123.733162,
+                  45.564678,
+                  239.49234559942565,
+                  0
+                ],
+                [
+                  -123.732857,
+                  45.565162,
+                  248.7627286397704,
+                  0
+                ],
+                [
+                  -123.732346,
+                  45.565483,
+                  239.42443712012866,
+                  0
+                ],
+                [
+                  -123.731858,
+                  45.565971,
+                  216.77664576013333,
+                  0
+                ],
+                [
+                  -123.73211,
+                  45.56697,
+                  214.3840000000837,
+                  0
+                ],
+                [
+                  -123.732529,
+                  45.567588,
+                  218.4207564799772,
+                  0
+                ],
+                [
+                  -123.733498,
+                  45.567981,
+                  253.27809247972908,
+                  0
+                ],
+                [
+                  -123.734101,
+                  45.569011,
+                  245.22720719986586,
+                  0
+                ],
+                [
+                  -123.734192,
+                  45.569717,
+                  259.4198873599791,
+                  0
+                ],
+                [
+                  -123.734055,
+                  45.569869,
+                  270.89451759988464,
+                  0
+                ],
+                [
+                  -123.73404,
+                  45.569862,
+                  270.9310144002435,
+                  0
+                ],
+                [
+                  -123.73404,
+                  45.569862,
+                  270.9310144002435,
+                  0
+                ],
+                [
+                  -123.733689,
+                  45.569717,
+                  269.717599999869,
+                  0
+                ],
+                [
+                  -123.73333,
+                  45.569187,
+                  248.13839200002857,
+                  0
+                ],
+                [
+                  -123.731904,
+                  45.568519,
+                  250.04788096009008,
+                  0
+                ],
+                [
+                  -123.73124,
+                  45.568367,
+                  271.5565472000505,
+                  0
+                ],
+                [
+                  -123.730965,
+                  45.567989,
+                  271.13068160000154,
+                  0
+                ],
+                [
+                  -123.731003,
+                  45.567741,
+                  261.1204503998577,
+                  0
+                ],
+                [
+                  -123.730179,
+                  45.566848,
+                  268.3306572796767,
+                  0
+                ],
+                [
+                  -123.729989,
+                  45.566116,
+                  262.4633939199118,
+                  0
+                ],
+                [
+                  -123.729691,
+                  45.565578,
+                  241.7473180800283,
+                  0
+                ],
+                [
+                  -123.727089,
+                  45.564952,
+                  247.201450239855,
+                  0
+                ],
+                [
+                  -123.726784,
+                  45.564922,
+                  246.64180992018885,
+                  0
+                ],
+                [
+                  -123.726716,
+                  45.564952,
+                  248.74268927989303,
+                  0
+                ],
+                [
+                  -123.726716,
+                  45.564952,
+                  248.74268927989303,
+                  0
+                ],
+                [
+                  -123.72519,
+                  45.565677,
+                  253.63386879995898,
+                  0
+                ],
+                [
+                  -123.724167,
+                  45.566268,
+                  240.09191103987888,
+                  0
+                ],
+                [
+                  -123.722756,
+                  45.567573,
+                  262.8741964801862,
+                  0
+                ],
+                [
+                  -123.722069,
+                  45.568367,
+                  272.3452539200994,
+                  0
+                ],
+                [
+                  -123.721543,
+                  45.568622,
+                  276.0692147199889,
+                  0
+                ],
+                [
+                  -123.721436,
+                  45.568599,
+                  276.47161088000627,
+                  0
+                ],
+                [
+                  -123.721436,
+                  45.568599,
+                  276.47161088000627,
+                  0
+                ],
+                [
+                  -123.721215,
+                  45.56855,
+                  284.3331200000051,
+                  0
+                ],
+                [
+                  -123.720589,
+                  45.568191,
+                  297.85113519977176,
+                  0
+                ],
+                [
+                  -123.719712,
+                  45.567562,
+                  291.92384128007376,
+                  0
+                ],
+                [
+                  -123.719254,
+                  45.566581,
+                  276.8546486400087,
+                  0
+                ],
+                [
+                  -123.719254,
+                  45.566581,
+                  276.8546486400087,
+                  0
+                ],
+                [
+                  -123.71888,
+                  45.565773,
+                  307.2164479999537,
+                  0
+                ],
+                [
+                  -123.717934,
+                  45.565483,
+                  295.9967910399693,
+                  0
+                ],
+                [
+                  -123.717156,
+                  45.565032,
+                  304.20931839996103,
+                  0
+                ],
+                [
+                  -123.715165,
+                  45.564647,
+                  326.5563447999435,
+                  0
+                ],
+                [
+                  -123.714013,
+                  45.564567,
+                  334.2016718401654,
+                  0
+                ],
+                [
+                  -123.713341,
+                  45.564632,
+                  332.38985791984544,
+                  0
+                ],
+                [
+                  -123.712945,
+                  45.56491,
+                  337.571999999896,
+                  0
+                ],
+                [
+                  -123.712403,
+                  45.565128,
+                  351.12742272016783,
+                  0
+                ],
+                [
+                  -123.711686,
+                  45.565185,
+                  368.39546080001156,
+                  0
+                ],
+                [
+                  -123.710618,
+                  45.565128,
+                  385.41076351998754,
+                  0
+                ],
+                [
+                  -123.709488,
+                  45.565017,
+                  391.0227884801421,
+                  0
+                ],
+                [
+                  -123.70784,
+                  45.56496,
+                  402.38374399999566,
+                  0
+                ],
+                [
+                  -123.7072,
+                  45.564765,
+                  432.8886399998845,
+                  0
+                ],
+                [
+                  -123.705971,
+                  45.564826,
+                  449.4212000000068,
+                  0
+                ]
+              ]
+            ]
+          }
+        }
+    ]
+}
+      },
         "layout": {
             "line-join": "round",
             "line-cap": "round"
         },
         "paint": {
             "line-color": "#c20ed5",
-            "line-width": 1.3
+            "line-width": 1.5
         }
     });
   });
 
     map.on('click', 'places', function (e) {
         var coordinates = e.features[0].geometry.coordinates.slice();
-        var description = `<h3>${e.features[0].properties.name}</h3> <h4>Drive time from Portland: ${e.features[0].properties.driveTime}</h4><a href=${e.features[0].properties.url}>Oregon Hikers</a>`;
+        var description = `<div class="popups"><h3>${e.features[0].properties.name}</h3> <h4>Drive time from Portland: ${e.features[0].properties.driveTime}</h4><a href=${e.features[0].properties.url}>Oregon Hikers</a></div>`;
         while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
             coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
         }
@@ -79,9 +1767,9 @@ map.on('load', function () {
             .addTo(map);
     });
 
-    map.on('click', 'route', function (e) {
-        var coordinates = e.features[0].geometry.coordinates.slice();
-        var description = `hello`;
+    map.on('mouseenter', 'route', function (e) {
+        var coordinates = e.features[0].geometry.coordinates[0].slice();
+        var description = `<div class="popups"><h3>${e.features[0].properties.title}</h4><a href=https://gaiagps.com${e.features[0].properties.preferred_link}>Gaia Maps Route</a></div>`;
         while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
             coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
         }
