@@ -1,50 +1,145 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Northern Oregon Coast Range Map</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato|Lora|Noto+Sans+TC" rel="stylesheet">
-    <script src='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet'/>
-    <link rel="stylesheet" href="styles.css">
 
-  </head>
-  <body>
-   <div class="container">
-      <div id='map'></div>
-      <div id="project-info">
-        <h1 id="northern-oregon-coast-range-hike-fish-map">Northern Oregon Coast Range Hike/Fish Map</h1>
-        <h3 id="thanksgiving-2018-gaia-junior-software-engineer-application-project-">Thanksgiving 2018 Gaia Junior Software Engineer application project.</h3>
-        <h4 id="goals">Goals</h4>
-        <ul>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Northern Oregon Coast Range Map</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato|Lora|Noto+Sans+TC" rel="stylesheet">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="styles.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div id='map'></div>
+    <div id="project-info">
+      <h1 id="northern-oregon-coast-range-hike-fish-map">Northern Oregon Coast Range Hike/Fish Map</h1>
+      <h3 id="thanksgiving-2018-gaia-junior-software-engineer-application-project-">Thanksgiving 2018 Gaia Junior Software Engineer application project.</h3>
+      <h4 id="goals">Goals</h4>
+      <ul>
         <li>Use Mapbox</li>
         <li>Make something I actually want to use, that doesn't exist, that provides value to others</li>
         <li>Work on project planning, goal setting, and managing project creep</li>
         <li>Get hired</li>
-        </ul>
-        <h4 id="the-project">The Project</h4>
-        <ul>
+      </ul>
+      <h4 id="the-project">The Project</h4>
+      <ul>
         <li>Build an interactive map of hiking and (potential) fishing locations in the Oregon's Northern Coast Range using Node.js, Mapbox GL, and ES6.</li>
-        </ul>
-        <h4 id="happening-now">Happening now</h4>
-        <ul>
+      </ul>
+      <h4 id="happening-now">Happening now</h4>
+      <ul>
         <li>Scrape Oregon Hikers for Tillamook and Clatsop trailheads</li>
         <li>Build base map<ul>
-        <li>Hikes from Oregon Hikers, Gaia GPS, and Oregon Sierra Club's <em>50 Hikes in the  Tillamook and Clatsop State Forests</em></li>
-        </ul>
+            <li>Hikes from Oregon Hikers, Gaia GPS, and Oregon Sierra Club's <em>50 Hikes in the Tillamook and Clatsop State Forests</em></li>
+          </ul>
         </li>
-        </ul>
-        <h4 id="future-features">Future features</h4>
-        <ul>
+      </ul>
+      <h4 id="future-features">Future features</h4>
+      <ul>
         <li>Popups for additional trailhead info, amenities, etc</li>
-        <li>Choropleth on fish ODFW totals</li>
+        <li>Choropleth or charts from ODFW on fish run totals</li>
+        <li>More map interactivity: e.g. filter hikes length</li>
         <li>Public land, boating access, campsites, additional forest data from state</li>
-        </ul>
-        <h4 id="project-inspiration">Project inspiration</h4>
-        <p>tktk</p>
-      </div>
+      </ul>
+      <h4 id="project-inspiration">Project inspiration</h4>
+      <p>I'm reading <a title="Upstream Searching for Wild Salmon, from River to Table" href="http://www.randomhousebooks.com/books/248166/">Langdon Cook's <em>Upstream</em></a> after a November hike up the Salmon River. I saw dozens of dead salmon
+        under the bridge on FS2618 and wanted to know more. I've lived in Oregon for five years and have done plenty of hiking, biking, and skiing, but haven't fished since I left New York. I know how to fish for smallmouth and brownies on the
+        Schroon River or largemouth in Brant Lake, but I don't know to fish rivers for west coast salmonids. I've decided to change that and have started studying up, starting with Upstream and the Oregon Sierra Club's <em>50 Hikes in the Tillamook
+          &amp; Clatsop State Forests</em>.</p>
+      <p>Chapter 5 of <em>Upstream</em> focuses on the conservation work of Guido Rahr and the folks at <a title="Campaigns: Oregon North Coast" href="https://www.wildsalmoncenter.org/campaigns/oregon-north-coast/">Portland's Wild Salmon Center</a>.
+        Cook and Rarh fish unnamed rivers and tributaries around Tillamook Bay and talk about the history, ecology, and politics around Oregon's wild salmon and forestlands. I found the chapter revelatory and inspiring. These important, protected
+        lands and wild fish are in my backyard and I only know them passing: a hike up King's Mountain above the Wilson, summertime day trips to Netarts, schlepping visiting family and friends over Quartz Creek on US26 on the way to Cannon Beach.
+        Time to change that. What better way to learn an area than by mapping it.</p>
+      <p>The Columbia River Gorge caught fire in 2017 and a majority of the trails on the Oregon side are still closed. The Northern Coast Range-- which includes the Tillamook and Clatsop State Forests-- is not as well-known or well-mapped as the
+        Gorge's trail system but also offers great year-round hiking. Many of these trails aren't easily found online-- at least not in one place. Many trails are abandoned logging roads, some share space with OHV, some aren't considered trails at
+        all. State funding issues plague trail and bridge maintenance. In short, it's an overlooked place right in Portland's backyard that could use some attention. Using Gaia's OSM and CalTopo layers, I started mapping out routes, with an initial
+        focus on hikes around Tillamook Bay rivers.</p>
+      <p>The goal of this project is to gather trailhead, trail, river and fishing information all in one place, making exploration of the Northern Coast Range easier and more attainable. This is now an ongoing project. My main focus the past week
+        has been getting a stable base map up, adding in hike data from Gaia and trailhead data from my web scraper scripts, plus learning Mapbox as I go along. I hope to add either a choropleth map or charts with salmon run count data. I'd like to
+        explore additional data sources from the state regarding forest land use. And I'd like to keep building the map up, adding more interactivity and hike and trail information.</p>
+
+
+        <h4 id="some-code-highlights">Some code highlights</h4>
+        <p>This site is being built with ES6 JavaScript, Node.js and various modules, Mapbox GL, HTML5 and CSS3. This static version is hosted on Netlify. I'm using highlight.js for syntax highlighting. I used git/GitHub for version control and the repo is here <a href="https://github.com/morristaylor/nocr-gaia-map">https://github.com/morristaylor/nocr-gaia-map</a>.</p>
+
+        <p>I needed to get trailhead info for the Tillamook Forest/North Coast Range area. I set up this web scraper using request-promise-native and cheerio. It creates a JSON file with a list of URLs pulled from Oregon Hiker's Field Guide. Cheerio looks for any link with 'Trailhead' in the title, pushes it to an array, and writes the array to JSON.</p>
+
+        <pre><code>
+          const fs = require('fs');
+          const request = require('request');
+          const rp = require('request-promise-native');
+          const cheerio = require('cheerio');
+
+          // Takes Oregon Hikers Coast Range landmarks page, scrapes trailhead-only URLs, saves them to json for getTrailheadInfo script
+          function getTrailheadURL() {
+            const nocUrl = 'https://www.oregonhikers.org/field_guide/Category:Coast_Range'
+            rp(nocUrl).then((html) => {
+              let trailheadURLs = [];
+              const $ = cheerio.load(html);
+              Array.from($('a[title~="Trailhead"]')).forEach((trailhead) => {
+                trailheadURLs.push('https://www.oregonhikers.org' + trailhead.attribs.href)
+              })
+              fs.writeFileSync('trailhead-urls.json', JSON.stringify(trailheadURLs));
+            })
+          }
+
+          getTrailheadURL();
+        </code></pre>
+
+        <p>Next up, I take that JSON created above and run it through the following code. First, I wrote a constructor function to build a GeoJSON-compliant object. Next, I read and parse the URL JSON file, then use request-promise-native to make a request to each URL. Cheerio again scrapes the requests for relevant information, assigns them to the appropriate variables, executes the constructor function, and pushes them to an array. Once each URL has been requested, scraped, turned into an object and pushed to an array, the array is turned into JSON and written to a file. This GeoJSON-ready data is used in map.js</p>
+
+        <pre><code>
+          const fs = require('fs');
+            const request = require('request');
+            const rp = require('request-promise-native');
+            const cheerio = require('cheerio');
+
+            // Trailhead object constructor
+            function Trailhead(name, url, driveTime, lat, lng) {
+              this.type = "Feature",
+              this.properties = {},
+              this.properties.name = name,
+              this.properties.url = url,
+              this.properties.driveTime = driveTime
+              this.properties.icon = 'triangle',
+              this.geometry = {},
+              this.geometry.type = "Point",
+              this.geometry.coordinates = [lng, lat]
+            }
+
+            // Takes trailheads URLs from list made with getTrailheadURL, requests each URL, scrapes data from Oregon Hikers, and builds a new trailhead GeoJSON object
+            function getTrailheadInfo() {
+              var trailheads = [];
+              var urls = JSON.parse(fs.readFileSync('trailhead-urls.json', 'utf8'));
+              urls.forEach((url) => {
+                rp(url).then((html) => {
+                    const $ = cheerio.load(html);
+                    const name = $('#mainContent > h1').text().trim();
+                    const lat = parseFloat($('#mw-content-text > ul > li:nth-child(1)').slice(0,1).text().slice(11).trim());
+                    const lng = parseFloat($('#mw-content-text > ul > li:nth-child(2)').text().slice(12).trim());
+                    const driveTime = $('#mw-content-text > ul > li').slice(4, 5).text().slice(29).trim();
+                    let trailhead = new Trailhead(name, url, driveTime, lat, lng);
+                    if (trailhead.geometry.coordinates[1] >= 45) {
+                      trailheads.push(trailhead);
+                    }
+                    fs.writeFileSync('trailhead-info.json', JSON.stringify(trailheads));
+                  });
+              })
+            }
+
+            getTrailheadInfo()
+          </code></pre>
+
     </div>
+  </div>
   <script src='./map.js'></script>
-  </body>
+</body>
+
 </html>

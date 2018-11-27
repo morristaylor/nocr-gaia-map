@@ -1,6 +1,6 @@
 /* Still a bit of a mess but enough to get going */
 
-body {
+body:not(#no-css) {
   font-family: 'Noto Sans TC', sans-serif;
   background-color: #FFFF;
   color: #112C50;
@@ -35,6 +35,10 @@ h1 {
     font-family: 'Lora', serif;
     width: 75%;
     margin: auto;
+}
+
+#northern-oregon-coast-range-hike-fish-map {
+  text-align: center;
 }
 
 .marker {
