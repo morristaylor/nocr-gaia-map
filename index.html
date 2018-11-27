@@ -23,7 +23,7 @@
       <h1 id="northern-oregon-coast-range-hike-fish-map">Northern Oregon Coast Range Hike/Fish Map</h1>
       <h3 id="thanksgiving-2018-gaia-junior-software-engineer-application-project-">Thanksgiving 2018 Gaia Junior Software Engineer application project.</h3>
       <h4 id="goals">About me</h4>
-      <p>Hey. My name is Taylor Morris. I'm a web developer looking for a job. You can read more about me <a href="https://taylormorris.net">on my website</a> and see my code on my <a href="https://github.com/morristaylor">GitHub</a>.</p> The code for this project is <a href="https://github.com/morristaylor/nocr-gaia-map">here</a>. This is still very much a new work in progress, but I'm in the final stages of a version I feel comfortable sharing. I'm currently routing more hikes with Gaia and adding them to the map (and waiting for my copy of <em>50 Hikes in the Tillamook and Clatsop State Forests</em> to arrive). I know interviews for the Junior Engineer position start soon so I want to throw my hat into the ring before it's too late. Watch this space. Enjoy!
+      <p>Hey. My name is Taylor Morris. I'm a developer looking for a job. You can read more about me <a href="https://taylormorris.net">on my website</a> and see my code on my <a href="https://github.com/morristaylor">GitHub</a>.</p> The code for this project is <a href="https://github.com/morristaylor/nocr-gaia-map">here</a>. This is still very much a new work in progress, but I'm in the final stages of a version I feel comfortable sharing. I'm currently routing more hikes with Gaia and adding them to the map (and waiting for my copy of <em>50 Hikes in the Tillamook and Clatsop State Forests</em> to arrive). I know interviews for the Junior Engineer position start soon so I want to throw my hat into the ring before it's too late. Watch this space. Enjoy!
       <h4 id="goals">Goals</h4>
       <ul>
         <li>Use Mapbox</li>
@@ -33,7 +33,7 @@
       </ul>
       <h4 id="the-project">The Project</h4>
       <ul>
-        <li>Build an interactive map of hiking and (potential) fishing locations in the Oregon's Northern Coast Range using Node.js, Mapbox GL, and ES6.</li>
+        <li>Build an interactive map of hiking and potential fishing locations in the Oregon's Northern Coast Range using Node.js, Mapbox GL, and ES6.</li>
       </ul>
       <h4 id="happening-now">Happening now</h4>
       <ul>
@@ -65,13 +65,13 @@
         focus on hikes around Tillamook Bay rivers.</p>
       <p>The goal of this project is to gather trailhead, trail, river and fishing information all in one place, making exploration of the Northern Coast Range easier and more attainable. This is now an ongoing project. My main focus the past week
         has been getting a stable base map up, adding in hike data from Gaia and trailhead data from my web scraper scripts, plus learning Mapbox as I go along. I hope to add either a choropleth map or charts with salmon run count data. I'd like to
-        explore additional data sources from the state regarding forest land use. And I'd like to keep building the map up, adding more interactivity and hike and trail information.</p>
+        explore additional data sources from the state regarding land use. And I'd like to keep building the map up, adding more interactivity and hike and trail information.</p>
 
 
         <h4 id="some-code-highlights">Some code highlights</h4>
-        <p>This site is being built with ES6 JavaScript, Node.js and various modules, Mapbox GL, HTML5 and CSS3. This static version is hosted on Netlify. I'm using highlight.js for syntax highlighting. I used git/GitHub for version control and the repo is here <a href="https://github.com/morristaylor/nocr-gaia-map">https://github.com/morristaylor/nocr-gaia-map</a>.</p>
+        <p>This site is being built with ES6 JavaScript, Node.js and various modules, Mapbox GL, HTML5 and CSS3. This static version is hosted on Netlify. I'm using highlight.js for syntax highlighting. I use git/GitHub for version control and the repo is here <a href="https://github.com/morristaylor/nocr-gaia-map">https://github.com/morristaylor/nocr-gaia-map</a>.</p>
 
-        <p>I needed to get trailhead info for the Tillamook Forest/North Coast Range area. I set up this web scraper using request-promise-native and cheerio. It creates a JSON file with a list of URLs pulled from Oregon Hiker's Field Guide. Cheerio looks for any link with 'Trailhead' in the title, pushes it to an array, and writes the array to JSON.</p>
+        <p>I needed to get trailhead info for the Tillamook Forest/North Coast Range area. I set up this web scraper using request-promise-native and Cheerio. It creates a JSON file containing a list of URLs pulled from Oregon Hikers' Field Guide. Cheerio looks for any link with 'Trailhead' in the title, pushes it to an array, and writes the array to JSON.</p>
 
         <pre><code>
           const fs = require('fs');
@@ -95,7 +95,7 @@
           getTrailheadURL();
         </code></pre>
 
-        <p>Next up, I take that JSON created above and run it through the following code. First, I wrote a constructor function to build a GeoJSON-compliant object. Next, I read and parse the URL JSON file, then use request-promise-native to make a request to each URL. Cheerio again scrapes the requests for relevant information, assigns them to the appropriate variables, executes the constructor function, and pushes them to an array. Once each URL has been requested, scraped, turned into an object and pushed to an array, the array is turned into JSON and written to a file. This GeoJSON-ready data is used in map.js</p>
+        <p>Next up, I take that JSON created above and run it through the following code. First, I wrote a constructor function to build a GeoJSON-compliant object. Next, I read and parse the URL JSON file, then use request-promise-native to make a request to each URL. Cheerio again scrapes the requests for relevant information, assigns them to the appropriate variables, executes the constructor function, and pushes them to an array. Once each URL has been requested, scraped, turned into an object and pushed to an array, the array is turned into JSON and written to a file. This GeoJSON-ready data is used in <a href="https://github.com/morristaylor/nocr-gaia-map/blob/master/map.js">map.js</a>.</p>  
 
         <pre><code>
           const fs = require('fs');
