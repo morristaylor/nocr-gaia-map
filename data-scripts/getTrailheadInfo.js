@@ -3,6 +3,7 @@ const request = require('request');
 const rp = require('request-promise-native');
 const cheerio = require('cheerio');
 
+// Trailhead object constructor
 function Trailhead(name, url, driveTime, lat, lng) {
   this.type = "Feature",
   this.properties = {},
@@ -15,6 +16,7 @@ function Trailhead(name, url, driveTime, lat, lng) {
   this.geometry.coordinates = [lng, lat]
 }
 
+// Takes trailheads URLs from list made with getTrailheadURL, requests each URL, scrapes data from Oregon Hikers, and builds a new trailhead GeoJSON object
 function getTrailheadInfo() {
   var trailheads = [];
   var urls = JSON.parse(fs.readFileSync('trailhead-urls.json', 'utf8'));

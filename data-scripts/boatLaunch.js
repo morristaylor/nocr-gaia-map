@@ -2,6 +2,8 @@ const fs = require('fs');
 const request = require('request');
 const rp = require('request-promise-native');
 
+// Unfinished. Working on grabbing boat launch data from the state, building GeoJSON objects for Clatsop and Tillamook counties launches, eventually adding them to map with other points.
+
 // rp('https://data.oregon.gov/resource/dbtp-feta.geojson').then((data) => {
 //     fs.writeFileSync('raw-boat.json', data);
 //   });
@@ -13,12 +15,6 @@ function getNWRamps() {
     if (ramp.properties.county == "Clatsop") {
       var clatsopRamps = []
       clatsopRamps.push(ramp);
-    } else if (ramp.properties.county == "Tillamook") {
-      var tillamookRamps = []
-      tillamookRamps.push(ramp);
-    } else if (ramp.properties.county == "Lincoln") {
-      var lincolnRamps = []
-      lincolnRamps.push(ramp);
     }
   });
 };

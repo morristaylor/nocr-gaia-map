@@ -1768,7 +1768,9 @@ map.on('load', function () {
 
     map.on('mouseenter', 'route', function (e) {
         var coordinates = e.features[0].geometry.coordinates[0].slice();
-        var description = `<div class="popups"><h3>${e.features[0].properties.title}</h4><a href=https://gaiagps.com${e.features[0].properties.preferred_link}>Gaia Maps Route</a></div>`;
+        var distanceMiles = parseFloat(e.features[0].properties.distance * .000621371).toFixed(2);
+        var description = `<div class="popups"><h3>${e.features[0].properties.title}</h3><a href=https://gaiagps.com${e.features[0].properties.preferred_link}>Gaia Maps Route</a>
+        <h4>Distance: ${distanceMiles}</div>`;
         while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
             coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
         }

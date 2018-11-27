@@ -3,9 +3,9 @@ const request = require('request');
 const rp = require('request-promise-native');
 const cheerio = require('cheerio');
 
-const nocUrl = 'https://www.oregonhikers.org/field_guide/Category:Coast_Range'
-
+// Takes Oregon Hikers Coast Range landmarks page, scrapes trailhead-only URLs, saves them to json for getTrailheadInfo script
 function getTrailheadURL() {
+  const nocUrl = 'https://www.oregonhikers.org/field_guide/Category:Coast_Range'
   rp(nocUrl).then((html) => {
     let trailheadURLs = [];
     const $ = cheerio.load(html);
