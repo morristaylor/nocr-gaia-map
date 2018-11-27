@@ -2,24 +2,39 @@
 
 body {
   font-family: 'Noto Sans TC', sans-serif;
-  background-color: #B3C2C0;
-  color: #00221E;
+  background-color: #FFFF;
+  color: #112C50;
+}
+
+.container {
+  padding-top: 1.5%;
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+}
+
+h1 {
+  font-variant: small-caps;
 }
 
 #header {
   font-family: 'Lato', sans-serif;
   display: flex;
-}
-
-#grafs {
-  font-family: 'Lora', serif;
+  align-items: center;
+  justify-content: center;
 }
 
 #map {
   height: 450px;
-  width: 75%;
+  width: 100%;
   margin: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#project-info {
+    font-family: 'Lora', serif;
+    width: 75%;
+    margin: auto;
 }
 
 .marker {

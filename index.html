@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Northern Oregon Coast Range</title>
+    <title>Northern Oregon Coast Range Map</title>
     <link href="https://fonts.googleapis.com/css?family=Lato|Lora|Noto+Sans+TC" rel="stylesheet">
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet'/>
@@ -11,19 +11,40 @@
 
   </head>
   <body>
-      <div id='header'>
+   <div class="container">
+      <div id='map'></div>
+      <div id="project-info">
+        <h1 id="northern-oregon-coast-range-hike-fish-map">Northern Oregon Coast Range Hike/Fish Map</h1>
+        <h3 id="thanksgiving-2018-gaia-junior-software-engineer-application-project-">Thanksgiving 2018 Gaia Junior Software Engineer application project.</h3>
+        <h4 id="goals">Goals</h4>
         <ul>
-          <li><h1>Northern Oreon Coast Range Map</h1>
-          <li>About
-          <li><a href="https://github.com/morristaylor/gaia-application">GitHub</a>
+        <li>Use Mapbox</li>
+        <li>Make something I actually want to use, that doesn't exist, that provides value to others</li>
+        <li>Work on project planning, goal setting, and managing project creep</li>
+        <li>Get hired</li>
         </ul>
+        <h4 id="the-project">The Project</h4>
+        <ul>
+        <li>Build an interactive map of hiking and (potential) fishing locations in the Oregon's Northern Coast Range using Node.js, Mapbox GL, and ES6.</li>
+        </ul>
+        <h4 id="happening-now">Happening now</h4>
+        <ul>
+        <li>Scrape Oregon Hikers for Tillamook and Clatsop trailheads</li>
+        <li>Build base map<ul>
+        <li>Hikes from Oregon Hikers, Gaia GPS, and Oregon Sierra Club's <em>50 Hikes in the  Tillamook and Clatsop State Forests</em></li>
+        </ul>
+        </li>
+        </ul>
+        <h4 id="future-features">Future features</h4>
+        <ul>
+        <li>Popups for additional trailhead info, amenities, etc</li>
+        <li>Choropleth on fish ODFW totals</li>
+        <li>Public land, boating access, campsites, additional forest data from state</li>
+        </ul>
+        <h4 id="project-inspiration">Project inspiration</h4>
+        <p>tktk</p>
       </div>
-      <div id='map'>
-      </div>
-      <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </div>
+    </div>
   <script src='./map.js'></script>
   </body>
 </html>
