@@ -4157,7 +4157,7 @@ map.on('load', function () {
             .addTo(map);
     });
 
-    // 2018-11-21 TODONE: ok good job good effort! Don't forget to load in your API key when you start again. Figure out a plan for process.env stuff later for deployment. The map is loading adhoc geojson features and mapping them! The popups are working and building small HTML snippets with template strings for features.props. Math.abs code around line 48 came from Mapbox's docs.
+    // 2018-11-21 TODONE: ok good job good effort! Don't forget to load in your API key when you start again. The map is loading adhoc geojson features and mapping them! The popups are working and building small HTML snippets with template strings for features.props. Math.abs code around line 48 came from Mapbox's docs.
     //
     // You need to work on cleaning and normalizing the data from combo.js. It's close but not a perfect match for the GeoJSON data used here. Once you have that data outputting how you want, expect to just dump it in here. New trailheads don't spring up everyday and right now you're working on something resembling 'MVP' so have fun with it and don't get too hung up on that part. Once you have that data, you have that data.
     //
