@@ -1,5 +1,4 @@
 # Northern Oregon Coast Range Hike/Fish Map
-### Thanksgiving 2018 Gaia Junior Software Engineer application project.
 
 #### Goals
 * Use Mapbox
@@ -16,6 +15,7 @@
   * Hikes from Oregon Hikers, Gaia GPS, and Oregon Sierra Club's *50 Hikes in the  Tillamook and Clatsop State Forests*
 
 #### Future features
+* Rewrite/refactor, use React
 * Popups for additional trailhead info, amenities, etc
 * Choropleth or charts from ODFW on fish run totals
 * More map interactivity: e.g. filter hikes length
